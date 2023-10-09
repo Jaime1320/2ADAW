@@ -27,8 +27,6 @@
         };
         return $precio;
     }
-    echo precioConIva(10, "GENERAL");
-    echo precioSinIva(10, "GENERAL");
     ?>
 </body>
 </html>

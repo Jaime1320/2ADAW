@@ -46,8 +46,6 @@
         }
         return $salarioIRPF;
     }
-    echo "<br>";
-    echo calcularIRPF(38000);
     ?>
 </body>
 </html>
