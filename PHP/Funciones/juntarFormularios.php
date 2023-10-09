@@ -13,7 +13,7 @@
     <h2>Formulario IVA</h2>
     <form action="" method="post">
         <fieldset>
-        <legend>Formulario IVA</legend>
+            <legend>Formulario IVA</legend>
             <label>Precio</label>
             <br>
             <input type="text" name="precio">
@@ -24,38 +24,40 @@
             <br><br>
             <input type="hidden" name="action" value="iva">
             <input type="submit" value="Calcular">
-        </fieldset>
+
     </form>
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($_POST["action"] == "iva") {
             $precio = (float) $_POST["precio"];
             $iva = $_POST["tipo_iva"];
-            echo precioConIva($precio, $iva);
+            echo "<h3>" . precioConIva($precio, $iva) . "</h3>";
         }
     }
     ?>
+    </fieldset>
     <h2>Formulario IRPF</h2>
     <form action="" method="post">
         <fieldset>
-        <legend>Formulario IRPF</legend>
+            <legend>Formulario IRPF</legend>
             <label>Salario</label>
             <br>
             <input type="number" step="1000" name="salario">
             <br><br>
             <input type="hidden" name="action" value="irpf">
             <input type="submit" value="Calcular">
-        </fieldset>
+
 
     </form>
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($_POST["action"] == "irpf") {
             $salario = (float) $_POST["salario"];
-            echo calcularIRPF($salario);
+            echo "<h3>" . calcularIRPF($salario) . "</h3>";
         }
     }
     ?>
+    </fieldset>
 </body>
 
 </html>
