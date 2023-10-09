@@ -59,8 +59,8 @@ function ejercicio7() {
             if (isNaN(numero)) {
                 alert("Introduce valores por favor")
             }
-            else { 
-                arrayValores.push(parseInt(numero)); 
+            else {
+                arrayValores.push(parseInt(numero));
             }
 
         }
@@ -102,17 +102,78 @@ function ejercicio9() {
     let num;
     let array1 = [];
     let cont = 1;
-   
+
     do {
         num = prompt("Dime un numero positivo mayor que dos");
         parseInt(num);
     } while (num <= 2 || isNaN(num));
     for (i = 0; i < num; i++) {
         array1[i] = []
-        for(j=0;j< num;j++){
-            array1[i][j] = num*cont;
+        for (j = 0; j < num; j++) {
+            array1[i][j] = num * cont;
             cont++;
         }
     }
     console.log(array1);
 }
+
+function ejercicio10() {
+    var array1 = [];
+    var array2 = [];
+    var arrayJunta = [];
+    var arrayFinal = [];
+    var numero;
+    do {
+        numero = prompt("Introduzca numeros. Cuando haya acabado escriba *");
+        if (numero != "*") {
+            if (isNaN(numero)) {
+                alert("Introduce valores por favor")
+            }
+            else {
+                array1.push(parseInt(numero));
+            }
+
+        }
+        
+    } while (numero != "*");
+    console.log("Array 1: " + array1);
+    do {
+        numero = prompt("Introduzca numeros. Cuando haya acabado escriba *");
+        if (numero != "*") {
+            if (isNaN(numero)) {
+                alert("Introduce valores por favor")
+            }
+            else {
+                array2.push(parseInt(numero));
+            }
+
+        }
+        
+    } while (numero != "*");
+    console.log("Array 2: " + array2);
+
+    arrayJunta = array1.concat(array2);
+    console.log("Este es el array junto: " + arrayJunta);
+
+    let contador = 0;
+    do {
+        let repetido = false
+        let numero = arrayJunta[contador];
+        for (let i = arrayJunta.indexOf(numero) + 1; i < arrayJunta.length; i++) {
+            if (numero == arrayJunta[i]) {
+                repetido = true;
+                break;
+            }
+        }
+        if (!repetido){
+            arrayFinal.push(numero);
+        }
+        contador++;
+    } while (contador < arrayJunta.length);
+
+    console.log(arrayFinal);
+}
+
+
+
+
