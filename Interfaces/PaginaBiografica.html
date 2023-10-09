@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaime Hermana Caffarena</title>
+</head>
+<body>
+    <h2>Indice</h2>
+    <ol>
+        <a href="#sobremi"><li>Sobre mi</li></a>
+        <a href="#aficiones"><li>Aficiones</li></a>
+        <a href="#ciudades"><li>Ciudades visitadas</li></a>
+        <a href="#formulario"><li>Formulario</li></a>
+    </ol>
+    <h2 id="sobremi">Sobre mi</h2>
+    <p>Me llamo <b>Jaime Hermana Caffarena</b> tengo <b>22</b> años nací en Málaga en el año 2000. Soy muy <b>trabajador</b> y ademas me gusta mucho el trabajo en equipo. Me gusta mucho el deporte, sobre todo el futbol y el padel. Actualmente trabajo en el aeropuerto de Málaga como agente de pasaje para varias compañias, ademas de eso estudio un grado superior de desarrollo de aplicaciones web.</p>
+    <h2 id="aficiones">Aficiones</h2>
+    <table width="80%" border="6">
+        <thead>
+            <tr>
+                <th>Afición</th>
+                <th>Descripción</th>
+                <th>Página Web</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="https://www.vallparc.com/wp-content/uploads/2023/04/3.jpg" height="75px" width="80px" alt="padel"></td>
+                <td>El pádel es un deporte de paleta con origen en México. Se juega siempre en parejas.  Consiste en hacer botar la bola en el campo contrario, con la posibilidad de rebotar en las paredes.</td>
+                <td><a href="https://es.wikipedia.org/wiki/P%C3%A1del" target="_blank"><button>Mas informacion</button></a></td>
+            </tr>
+            <tr>
+                <td><img src="https://estaticos-cdn.sport.es/clip/96e3800b-93b4-4687-9dcb-470022f3f949_alta-libre-aspect-ratio_default_0.jpg" height="75px" width="80px" alt="futbol"></td>
+                <td>El fútbol, futbol o balompié es un deporte de equipo jugado entre dos conjuntos de once jugadores cada uno, mientras los árbitros se ocupan de que las normas se cumplan correctamente.</td>
+                <td><a href="https://es.wikipedia.org/wiki/F%C3%BAtbol" target="_blank"><button>Más información</button></a></td>
+            </tr>
+            <tr>
+                <td><img src="https://149562642.v2.pressablecdn.com/wp-content/uploads/videojuegos-1140x717.jpg" height="75px" width="80px" alt="juego"></td>
+                <td>Un videojuego es un juego electrónico en el que uno o más jugadores interactúan por medio de un controlador, con un dispositivo electrónico que muestra imágenes de video.</td>
+                <td><a href="https://es.wikipedia.org/wiki/Videojuego" target="_blank"><button>Más información</button></a></td>
+            </tr>
+            <tr>
+                <td><img src="https://www.mgc.es/wp-content/uploads/2020/04/musica-corazon.jpg" height="75px" width="80px" alt="musica"></td>
+                <td>La música es un arte que se basa en la combinación de sonidos y silencios, utilizando diferentes instrumentos y técnicas para crear una obra sonora.</td>
+                <td><a href="https://es.wikipedia.org/wiki/M%C3%BAsica" target="_blank"><button>Más información</button></a></td>
+            </tr>
+            <tr>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golfer_swing.jpg/1200px-Golfer_swing.jpg" height="75px" width="80px" alt="golf"></td>
+                <td>El golf es un deporte cuyo objetivo es introducir una bola en los hoyos que están distribuidos en el campo con el menor número de golpes, utilizando para cada tipo de golpe uno de entre un conjunto de palos ligeramente diferentes entre sí, ya que la cabeza del palo tiene ángulos distintos, al igual que las varillas tienen longitudes diferentes .</td>
+                <td><a href="https://es.wikipedia.org/wiki/Golf" target="_blank"><button>Más información</button></a></td>
+            </tr>
+        </tbody>
+    </table>
+    <h2 id="ciudades">Ciudades que he visitado</h2>
+    <div>
+    <ul>
+        <a href="https://es.wikipedia.org/wiki/Edimburgo"><li>Edimburgo</li></a>
+        <a href="https://es.wikipedia.org/wiki/Doha"><li>Doha</li></a>
+        <a href="https://es.wikipedia.org/wiki/Par%C3%ADs"><li>París</li></a>
+        <a href="https://es.wikipedia.org/wiki/Roma"><li>Roma</li></a>
+    </ul>
+    </div>
+    <h2 id="formulario">Formulario</h2>
+    <h2>Formulario</h2>
+    <fieldset>
+        <legend>Información personal</legend>
+        <form action="https://google.com" method="get">
+            <label for="nombre">Nombre y apellidos (Maximo 20 caracteres):</label>
+            <input type="text" name="nombre" id="tunombre" maxlength="20"><br>
+            <label for="archivo">Adjunta una foto tuya:</label>
+            <input type="file" name="foto" id="foto"><br>
+            <label for="numero">Tu numero de telefono:</label>
+            <input type="number" name="numero" id="numero"><br>
+            <label for="fecha">Fecha de nacimiento:</label>
+            <input type="date" name="fecha" id="fecha"><br>
+            <label for="email">Cual es tu correo electronico:</label>
+            <input type="email" name="correo" id="correo"><br>
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" name="contraseña" id="contraseña"><br>
+            Sitio web: <input type="url" name="sitioweb" placeholder="¿Tienes un sitio web?"><br>
+            <label for="mes">¿En que mes naciste?</label>
+            <input type="month" name="mes" id="mes"><br>
+            <label for="semana">Semana favorita del año:</label>
+            <input type="week" name="semana" id="semana"><br>
+            <label for="radio">Sexo:</label>
+            <label>Hombre</label><input type="radio" name="radio" id="radio">
+            <label>Mujer</label><input type="radio" name="radio" id="radio"><br>
+            <label for="rango">¿Te gusta la pagina: Mucho</label>
+            <input type="range" name="rango" id="rango">Poco<br>
+            <label for="hora">Que hora es?:</label>
+            <input type="time" id="hora" name="hora" required><br><br>
+            <fieldset>
+                <legend>Preferencias</legend>
+                <label for="opcion1">¿De que equipo eres?</label>
+                <select id="opcion1" name="opcion1">
+                    <option value="opcion1">Málaga</option>
+                    <option value="opcion2">Real Betis</option>
+                    <option value="opcion3" selected>Real Madrid</option>
+                </select><br><br>
+    
+                <label for="comentarios">Sugerencias para la página:</label><br>
+                <textarea id="comentarios" name="comentarios" cols="15" rows="5" maxlength="200"></textarea><br><br>
+            </fieldset>
+    
+            <input type="submit" value="Enviar">
+        </form>
+    </fieldset>
+</body>
+</html>
