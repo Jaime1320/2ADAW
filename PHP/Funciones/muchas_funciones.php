@@ -23,7 +23,7 @@
         return (($num - 32) * 5 / 9 + 273.15);
     }
 ?>
-culo
+
 <?php
     function cambioTemperatura(int|float $temp, $U1, $U2){
         $x = match (true) {
