@@ -163,6 +163,7 @@ console.log(typeof miFuncion);
 function Saludar(){
     console.log("Saludos desde la funcion");
 }
+//?FUNCION RANDOM?//
 
 function random(min, max) {
     return parseInt(Math.random() * (max - min + 1) + min);
