@@ -15,8 +15,7 @@ function Sumar() {
             document.getElementById("resultado").innerHTML = "La suma de " + a + " + " + b  + " es: " + (a + b);
             comprobar = true;
         }
-    } while (comprobar == false)
-
+    } while (comprobar == false);
 }
 
 function Restar() {
@@ -36,7 +35,7 @@ function Restar() {
 
             document.getElementById("resultado").innerHTML = "La resta de " + a + " - " + b  + " es: " + (a - b);
         }
-    } while (comprobar == false)
+    } while (comprobar == false);
 }
 function Multiplicar() {
     let comprobar = true;
