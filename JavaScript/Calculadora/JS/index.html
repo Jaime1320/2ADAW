@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="../bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
+
+
     <title>Calculadora</title>
     <script src="app1.js"></script>
 </head>
@@ -21,17 +23,17 @@
             </div>
         </form>
         <!--Sacamos fuera del formulario para que no se ejecute POST-->
-        <button onclick="Sumar()">Sumar</button>
-        <button onclick="Restar()">Restar</button>
-        <button onclick="Multiplicar()">Multiplicar</button>
-        <button onclick="Dividir()">Dividir</button>
-        <button onclick="Potencia()">Potencia</button>
-        <button onclick="Modulo()">Módulo</button>
-        <button onclick="Incremento()">Incremento</button>
-        <button onclick="Decremento()">Decremento</button>
+        <button onclick="Sumar()" class="btn btn-primary" type="submit">Sumar</button>
+        <button onclick="Restar()" class="btn btn-secondary" type="submit">Restar</button>
+        <button onclick="Multiplicar()" class="btn btn-danger" type="submit">Multiplicar</button>
+        <button onclick="Dividir()" class="btn btn-success" type="submit">Dividir</button>
+        <button onclick="Potencia()" class="btn btn-primary" type="submit">Potencia</button>
+        <button onclick="Modulo()" class="btn btn-primary" type="submit">Módulo</button>
+        <button onclick="Incremento()" class="btn btn-primary" type="submit">Incremento</button>
+        <button onclick="Decremento()" class="btn btn-primary" type="submit">Decremento</button>
         <br><br>
         <div id="resultado"></div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="../bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
