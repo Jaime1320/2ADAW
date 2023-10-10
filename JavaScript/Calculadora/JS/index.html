@@ -3,34 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    
+    <title>Calculadora</title>
+    <script src="app1.js"></script>
 </head>
 <body>
-    <script src="cuentas.js"></script>
-    <h1>Calculadora</h1>
-    <br>
-    <form id="formulario">
-        <div>
-            <label for="operandoA">Operando A:</label>
-            <input type="number" placeholder="Escribe el operando A" id="operandoA">
-        </div>
-        <div>
-            <label for="operandoB">Operando B:</label>
-            <input type="number" placeholder="Escribe el operando B" id="operandoB">
-        </div>
-    </form>
-    <br>
-    <button onclick="Sumar()">Sumar</button>
-    <button onclick="Restar()">Restar</button>
-    <button onclick="Multiplicar()">Multiplicar</button>
-    <button onclick="Division()">Dividir</button>
-    <button onclick="Potencia()">Potencia</button>
-    <button onclick="Modulo()">Modulo</button>
-    <button onclick="Incremento()">Incremento</button>
-    <button onclick="Decremento()">Decremento</button>
-    <p id="resultado"></p>
+    <div class="container">
+        <h1>Aplicación de Calculadora</h1>
+        <form id="formulario">
+            <div>
+                <label for="operandoA" class="form-label">operando A: </label>
+                <input type="number" placeholder="Escribe el operando A" id="operandoA" class="form-control">
+            </div>
+            <div>
+                <label for="operandoB" class="form-label">operando B: </label>
+                <input type="number" placeholder="Escribe el operando B" id="operandoB" class="form-control">
+            </div>
+        </form>
+        <!--Sacamos fuera del formulario para que no se ejecute POST-->
+        <button onclick="Sumar()">Sumar</button>
+        <button onclick="Restar()">Restar</button>
+        <button onclick="Multiplicar()">Multiplicar</button>
+        <button onclick="Dividir()">Dividir</button>
+        <button onclick="Potencia()">Potencia</button>
+        <button onclick="Modulo()">Módulo</button>
+        <button onclick="Incremento()">Incremento</button>
+        <button onclick="Decremento()">Decremento</button>
+        <br><br>
+        <div id="resultado"></div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
