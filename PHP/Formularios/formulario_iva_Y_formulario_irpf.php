@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario IVA</title>
-    <?php require '../Funciones/ejercicio_irpf.php'?>
-    <?php require ''?>
+    <?php require '../Funciones/ejercicio_irpf.php' ?>
+    <?php require '../Funciones/ejercicio_iva.php' ?>
 </head>
 <body>
     <h2>Formulario IVA</h2>
