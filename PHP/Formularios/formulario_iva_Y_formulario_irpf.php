@@ -1,62 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <?php require "../Funciones/ejercicio_irpf.php"; ?>
-    <?php require "../Funciones/ejercicio_iva.php"; ?>
+    <title>Formulario IVA</title>
+    <?php require '../Funciones/ejercicio_irpf.php' ?>
+    <?php require '../Funciones/ejercicio_iva.php' ?>
 </head>
-
 <body>
-    <fieldset>
-        <legend>
-            <h2>Formulario IVA</h2>
-        </legend>
-        <form action="" method="post">
-            <label>Precio</label>
-            <br>
-            <input type="text" name="precio">
-            <br><br>
-            <label>Tipo de iva</label>
-            <br>
-            <input type="text" name="tipo_iva">
+    <h2>Formulario IVA</h2>
+
+    <form action="" method="post">
+        <fieldset>
+            <label>Precio: </label>
+            <input type="number" name="precio" step="0.1"><br><br>
+            <select name="iva">
+                <option value="GENERAL">General</option>
+                <option value="REDUCIDO">Reducido</option>
+                <option value="SUPERREDUCIDO">Superreducido</option>
+                <option value="SIN IVA">Sin IVA</option>
+            </select>
             <br><br>
             <input type="hidden" name="action" value="iva">
             <input type="submit" value="Calcular">
-        </form>
-        <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if ($_POST["action"] == "iva") {
-                $precio = (float) $_POST["precio"];
-                $iva = $_POST["tipo_iva"];
-                echo "<h3>" . precioConIva($precio, $iva) . "<h3>";
+            <?php
+            if($_SERVER["REQUEST_METHOD"] == "POST") {
+                if($_POST["action"] == "iva") {
+                    $precio = (float) $_POST["precio"];
+                    $iva = $_POST["iva"];
+                    echo "<h3>" . precioConIVA($precio, $iva) . "</h3>";
+                }
             }
-        }
-        ?>
-    </fieldset>
-    <fieldset>
-        <legend>
-            <h2>Formulario IRPF</h2>
-        </legend>
-        <form action="" method="post">
-            <label>Salario</label>
-            <br>
-            <input type="number" step="1000" name="salario">
-            <br><br>
+            ?>
+        </fieldset>
+    </form>
+
+    <h2>Formulario IRPF</h2>
+
+    <form action="" method="post">
+        <fieldset>
+            <label>Salario: </label>
+            <input type="number" step="1000" name="salario"><br><br>
             <input type="hidden" name="action" value="irpf">
             <input type="submit" value="Calcular">
-        </form>
-        <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if ($_POST["action"] == "irpf") {
-                $salario = (float) $_POST["salario"];
-                echo "<h3>" . calcularIRPF($salario) . "<h3>";
+            <?php
+            if($_SERVER["REQUEST_METHOD"] == "POST") {
+                if($_POST["action"] == "irpf") {
+                    $salario = (float) $_POST["salario"];
+                    echo "<h3>" . salarioSinIRPF($salario) . "</h3>";
+                }
             }
+            ?>
+        </fieldset>
+    </form>
+    <?php
+    /*if($_SERVER["REQUEST_METHOD"] == "POST") {
+        if($_POST["action"] == "iva") {
+            $precio = (float) $_POST["precio"];
+            $iva = $_POST["iva"];
+            echo precioConIVA($precio, $iva);
         }
-        ?>
-    </fieldset>
+        if($_POST["action"] == "irpf") {
+            $salario = (float) $_POST["salario"];
+            echo salarioSinIRPF($salario);
+        }
+    }*/
+    ?>
 </body>
-
 </html>

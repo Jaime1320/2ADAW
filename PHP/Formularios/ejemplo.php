@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejemplo</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="" method="get">
         <label>Nombre</label>
         <br>
-        <input type="text" name ="nombre">
+        <input type="text" name="nombre">
         <br><br>
-        <label>Apellido</label>
+        <label>Apellidos</label>
         <br>
-        <input type="text" name ="apellido">
+        <input type="text" name="apellidos">
         <br><br>
         <input type="submit" value="Enviar">
     </form>
     <?php
-    if ($_SERVER ["REQUEST_METHOD"] == "POST") {
-        echo "<h3>Formulario enviado</h3>";
-        $nombre = $_POST ["nombre"];
-        $apellido = $_POST["apellido"];
-        echo "<h4>$nombre $apellido</h4>";
+    if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        echo "<h3>Formulario enviado!</h3>";
+        $nombre = (int) $_GET["nombre"];
+        $apellidos = $_GET["apellidos"];
+        echo "<h4>$nombre $apellidos</h4>";
     }
     ?>
 </body>

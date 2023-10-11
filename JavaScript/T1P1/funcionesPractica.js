@@ -33,6 +33,7 @@ function ejercicio2(){
 
 }
 
+
 function ejercicio3(){
     let numero;
     let array1 = [];
@@ -114,7 +115,5 @@ function ejercicio4(){
         console.log(filaNueva1);
         console.log(filaNueva2);
     }
-    
-    
 }
 
