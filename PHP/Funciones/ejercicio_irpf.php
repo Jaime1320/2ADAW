@@ -8,7 +8,7 @@
 <body>
     <?php
     function salarioSinIRPF (float | int $salario) : float {
-        $salario_final;
+        $salario_final = 0;
         $tramo1 = (12450 * 0.19);
         $tramo2 = ((20200 - 12450) * 0.24);
         $tramo3 = ((35200 - 20200) * 0.30);
