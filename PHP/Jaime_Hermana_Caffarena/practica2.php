@@ -88,10 +88,10 @@
                             echo "El numero debe ser mayor que 0";
                         }
                     } else {
-                        if($numero>=1){
+                        if ($numero >= 1) {
                             $resultado = factorial($numero);
                             echo "<h4>El sumatorio es $resultado</h4>";
-                        }else{
+                        } else {
                             echo "El numero debe ser mayor o igual que 1";
                         }
                     }
