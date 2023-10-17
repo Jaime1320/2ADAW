@@ -174,6 +174,9 @@ function ejercicio10() {
     console.log(arrayFinal);
 }
 
-
-
-
+function fcabras(m=10 ,n=3){
+    return (m+n);
+}
+fcabras();
+console.log(fcabras(2,3));
+console.log(undefined,7);
