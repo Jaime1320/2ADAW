@@ -167,6 +167,7 @@ body{
 }
 
 /*Section de los proyectos individuales*/
+
 .proyectos-section{
     padding: 10px 80px 40px;
 }
@@ -177,6 +178,7 @@ body{
 
 .proyectos-book{
     display: inline-block;
+    vertical-align: top;
     padding: 10px;
     max-width: 32%;
     margin-bottom: 20px;
