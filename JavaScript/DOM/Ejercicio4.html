@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <style>
+        .cuadrado {
+            width: 400px;
+            height: 400px;
+        }
+
+        .visible {
+            display: block;
+        }
+
+        .invisible {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="galeria">
+        <img class="cuadrado visible" src="../../Interfaces/Diseños/foto1.jfif" alt="img1">
+        <img class="cuadrado invisible" src="../../Interfaces/Diseños/foto2.jpg" alt="img2">
+        <img class="cuadrado invisible" src="../../Interfaces/Diseños/foto3.jfif" alt="img3">
+        <img class="cuadrado invisible" src="../../Interfaces/Diseños/foto4.jfif" alt="img4">
+        <img class="cuadrado invisible" src="../../Interfaces/Diseños/foto5.jfif" alt="img5">
+    </div>
+    <button id="anterior" onclick="anterior()" disabled>Anterior</button>
+    <button id="siguiente" onclick="siguiente()">Siguiente</button>
+    <script src="galeria.js"></script>
+</body>
+
+</html>

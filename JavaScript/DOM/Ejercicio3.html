@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <div border="5">
+        0
+    </div>
+    <br>
+    <button onclick="sumar()">Boton Sumar</button>
+    <br>
+    <button onclick="restar()">Boton Restar</button>
+</body>
+</html>
+<script>
+    /*
+    function sumar(){
+        let divi = document.querySelector("div");
+        console.log(divi);
+        let num = parseInt(divi.innerHTML);
+        num++;
+        divi.innerHTML = num;
+    }
+    */
+
+    function sumar(){
+        document.querySelector("div").innerText++;
+    }
+
+    function restar(){
+        document.querySelector("div").innerText--;
+    }
+        
+</script>
