@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuario</title>
+    <?php require '../Funciones/base_de_datos.php' ?>
 </head>
 <body>
     <?php
@@ -121,17 +122,22 @@
             <label>Fecha de nacimiento: </label>
             <input type="date" name="fecha_nacimiento">
             <?php if(isset($err_fecha_nacimiento)) echo $err_fecha_nacimiento ?>
-            <br><br>
+            <br><b>
             <input type="submit" value="Registrarse">
-        </fieldset>
+    </fieldset>
     </form>
     <?php
     if(isset($usuario) && isset($nombre) && isset($apellidos) && isset($fecha_nacimiento)) {
 
-        echo "<h3>Usuario: $usuario</h3>";
-        echo "<h3>Nombre: $nombre</h3>";
-        echo "<h3>Apellidos: $apellidos</h3>";
-        echo "<h3>Fecha de nacimiento: $fecha_nacimiento</h3>";
+        echo "<h3>usuario: $usuario</h3>";
+        echo "<h3>nombre: $nombre</h3>";
+        echo "<h3>apellidos: $apellidos</h3>";
+        echo "<h3>fecha de nacimiento: $fecha_nacimiento</h3>";
+
+        $sql = "INSERT INTO usuarios (usuario , nombre , apellidos , fecha_nacimiento)
+        VALUES ('$usuario' , '$nombre' , '$apellidos' , '$fecha_nacimiento')";
+
+        $conexion -> query($sql);
     }
     ?>
 </body>
