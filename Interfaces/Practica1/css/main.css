@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Index */
+body{
+    font-family: sans-serif;
+    font-size: 400;
+}
+
+.index-body{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Header */
+.header{
+    width: 100%;
+    height: 140px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.social{
+    background-color: red;
+    width: 100%;
+    height: 50px;
+}
+
+.social-icons{
+    width: 250px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-self: self-end;
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-left: 70%;
+}
+
+.social-icons a{
+    color: white;
+    font-size: 28px;
+}
+
+.social-icons a:hover{
+    color: lightgrey;
+}
+
+.nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 90px;
+}
+
+.nav-logo{
+    margin-left: 50px;
+    display:flex;
+    align-items: center;
+}
+.nav-logo img{
+    width: 100px;
+    height: 5.5rem;
+}
+
+.nav-link {
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    margin-right: 130px;
+    margin-top: 20px;
+}
+
+.nav-link a{
+    text-decoration: underline;
+    color: black;
+}
+
+/*Main del Idex*/
+.index-main{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    height: 100%;
+    background-image: url(https://i.pinimg.com/originals/db/42/e7/db42e7230299fc6cfa10dda7c8f13729.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-container{
+    display: grid;
+    grid-column: 2;
+    justify-content: center;
+    text-align: center;
+    height: 350px;
+    margin-top: 80px;
+}
+
+.main-container_text{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 10px;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.main-container_link{
+    background-color: red;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    height: 45px;
+}
+
+.main-container_link:hover{
+    background-color: brown;
+}
+
+/*Pagina proyectos*/
+
+.proyectoPrincipal-section{
+    background-color: lightgray;
+}
+
+.proyectoPrincipal-content{
+    padding: 10px 80px 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr;
+}
+
+.proyectoPrincipal-content img{
+    grid-column: 1;
+    width: 85%;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.proyectoPrincipal-info{
+    grid-column: 2;
+}
+
+.proyectoPrincipal-info h2{
+    margin-bottom: 5%;
+}
+
+.proyectoPrincipal-info p{
+    margin-bottom: 10%;
+}
+
+.proyectos-btn{
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 15px 20px;
+    font-size: 14px;
+
+}
+
+/*Section de los proyectos individuales*/
+
+.proyectos-section{
+    padding: 10px 80px 40px;
+}
+
+.proyectos-section h3{
+    border-bottom: 1px solid lightcoral;
+}
+
+.proyectos-book{
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    max-width: 32%;
+    margin-bottom: 20px;
+}
+
+.proyectos-book img{
+    width: 100%;
+    height: 20rem;
+}
+
+.proyectos-book h4{
+    margin: 20px 0;
+}
+
+.proyectos-book p{
+    margin-bottom: 30px;
+}
+
+footer{
+    width: 100%;
+    height: 80px;
+    background-color: red;
+    border-top: 35px solid greenyellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p{
+    color: blue;
+    text-align: center;
+}
+
+.ciudades{
+    width: 1200px;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin: 0px auto;
+}
