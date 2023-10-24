@@ -7,6 +7,7 @@
     <title>Proyectos</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/all.min.css">
+    <script src="./bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -21,22 +22,40 @@
                 <a href=""><i class="fab fa-instagram"></i></a>
             </div>
         </div>
-        <nav class="nav">
-            <div class="nav-logo">
-                <a href="index1.html">
-                    <img src="/Interfaces/Diseños/descarga.png" alt="Logo de la pagina">
-                </a>
-            </div>
-            <div class="nav-link">
-                <a href="proyectos.html">Ir a proyectos</a>
-            </div>
+        <nav id="nav">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Info">Informacion sobre mi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#Aficiones">Aficiones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#Ciudades">Ciudades visitadas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#Enlaces" tabindex="-1" aria-disabled="true">Enlaces de interes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#UltimasTareas" tabindex="-1" aria-disabled="true">Ultimas
+                        tareas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#Galeria" tabindex="-1" aria-disabled="true">Galeria de
+                        imagenes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#InfoAdicional" tabindex="-1" aria-disabled="true">Informacion
+                        adicional</a>
+                </li>
+            </ul>
         </nav>
     </header>
     <main class="proyectos-main">
         <section class="proyectoPrincipal-section">
             <div class="proyectoPrincipal-content">
-                <h3>Informacion sobre mi</h3>
-                <img src="/Interfaces/Diseños/foto6.jfif" alt="img de proyectos">
+                <h3 class="titulo-info" id="#Info">Informacion sobre mi</h3>
+                <img src="./Jaime.jpg.jpeg" alt="img de proyectos">
                 <div class="proyectoPrincipal-info">
                     <h2>Jaime Hermana Caffarena</h2>
                     <p>
@@ -46,12 +65,11 @@
                         para varias compañias, ademas de eso estudio un grado superior de desarrollo de aplicaciones
                         web.</p>
                     </p>
-                    <a class="proyectos-btn" href="proyectoTFG.html">Leer mas</a>
                 </div>
             </div>
         </section>
         <section class="proyectos-section">
-            <h3>Aficiones</h3>
+            <h3 class="titulo-aficiones" id="Aficiones">Aficiones</h3>
             <div class="proyectos-book">
                 <img src="https://www.vallparc.com/wp-content/uploads/2023/04/3.jpg" alt="">
                 <h4>Padel</h4>
@@ -86,9 +104,7 @@
                     alt="">
                 <h4>Golf</h4>
                 <p>El golf es un deporte cuyo objetivo es introducir una bola en los hoyos que están distribuidos en el
-                    campo con el menor número de golpes, utilizando para cada tipo de golpe uno de entre un conjunto de
-                    palos ligeramente diferentes entre sí, ya que la cabeza del palo tiene ángulos distintos, al igual
-                    que las varillas tienen longitudes diferentes.</p>
+                    campo con el menor número de golpes.</p>
                 <a class="proyectos-btn" href="https://es.wikipedia.org/wiki/Golf">Leer mas</a>
             </div>
             <div class="proyectos-book">
@@ -96,14 +112,12 @@
                     alt="">
                 <h4>Cocinar</h4>
                 <p>La culinaria o arte culinario es una forma creativa de preparar los alimentos y depende mucho de la
-                    cultura, en términos de conocimientos respecto a los alimentos, su forma de prepararlos, así como de
-                    los rituales sociales establecidos alrededor de la comida.</p>
+                    cultura, en términos de conocimientos respecto a los alimentos..</p>
                 <a class="proyectos-btn" href="https://es.wikipedia.org/wiki/Arte_culinario">Leer mas</a>
             </div>
         </section>
         <div class="container shadow p-3 mb-5 bg-body rounded">
-
-            <h3 class="titulo">Ciudades visitadas</h3>
+            <h3 class="titulo-ciudades" id="Ciudades">Ciudades visitadas</h3>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><a href="https://es.wikipedia.org/wiki/Edimburgo">Edimburgo</a></li>
                 <li class="list-group-item"><a href="https://es.wikipedia.org/wiki/Doha">Doha</a></li>
@@ -111,7 +125,70 @@
                 <li class="list-group-item"><a href="https://es.wikipedia.org/wiki/Roma">Roma</a></li>
             </ul>
         </div>
-
+        <div class="container shadow p-3 mb-5 bg-body rounded">
+            <h3 class="enlaces-titulo" id="Enlaces">Enlaces de interes</h3>
+            <div class="enlaces">
+                <p><a href="#"
+                        class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">GitHub</a>
+                    <a href="#"
+                        class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Code.org</a>
+                    <a href="#"
+                        class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Codeacademy</a>
+                    <a href="#"
+                        class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">W3Schools</a>
+                    <a href="#"
+                        class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Upskill</a>
+                </p>
+            </div>
+        </div>
+        <div class="container shadow p-3 mb-5 bg-body rounded">
+            <h3 class="UltimasTareas" id="UltimasTareas">Ultimas tareas</h3>
+            <table class="table table-striped table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Asignatura</th>
+                        <th scope="col">Tarea</th>
+                        <th scope="col">Profesor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Entorno Servidor</td>
+                        <td>Formulario usuario</td>
+                        <td>Alejandra</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Entorno Cliente</td>
+                        <td>Galeria de fotos</td>
+                        <td>Jaime</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Despliegue</td>
+                        <td>Despliegue con Debian</td>
+                        <td>Jose Miguel</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container shadow p-3 mb-5 bg-body rounded">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="./java.jpg" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="./fotophp.jpg" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="./js.jpg" alt="Third slide">
+                  </div>
+                </div>
+              </div>
+        </div>
     </main>
     <footer>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, incidunt.</p>
