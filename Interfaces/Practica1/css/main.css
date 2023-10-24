@@ -222,9 +222,6 @@ footer p {
     text-align: center;
 }
 
-.ciudades {
-    width: 1200px;
-    border: 1px solid black;
-    margin-top: 20px;
-    margin: 0px auto;
+.ciudades{
+    text-align: center;
 }
