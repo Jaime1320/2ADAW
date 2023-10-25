@@ -1,10 +1,4 @@
-@media screen and (max-width:640px){
-    .box{
-    width: 90%;
-    margin:25px;
-    height: auto;
-    }
-}
+
 
 * {
     margin: 0;
@@ -19,9 +13,9 @@ body {
     background-color: red;
 }
 
-#nav >ul >li:hover{
-    background-color: rgb(255, 0, 30);
-    box-shadow: 0px 0px 10px rgb(181, 37, 37) inset;
+#nav>ul>li>a:hover {
+    background-color: rgba(0, 174, 255, 0.5);
+    box-shadow: 0px 0px 10px white;
 }
 
 .index-body {
@@ -31,10 +25,10 @@ body {
     left: 0;
     right: 0;
 }
+
 /* Header */
 .header {
     width: 100%;
-    height: 10px;
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
@@ -53,8 +47,7 @@ body {
     justify-content: space-between;
     justify-self: self-end;
     margin-top: 5px;
-    margin-right: 50px;
-    margin-left: 80%;
+    margin-left: 1%;
 }
 
 .social-icons a {
@@ -63,12 +56,12 @@ body {
 }
 
 .social-icons a:hover {
-    color:black;
+    color: black;
 }
 
 
 
-/*Main del Idex*/
+/*Main del Index*/
 .index-main {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
@@ -111,36 +104,41 @@ body {
     background-color: brown;
 }
 
-.proyectoPrincipal-section{
-    margin-top: 80px;
-    background-color: lightgrey;
+.proyectoPrincipal-section {
+    margin-top: 82px;
+    background-color: rgba(0, 174, 255, 0.5);
 }
 
-.proyectoPrincipal-content{
+.proyectoPrincipal-content {
     padding: 10px 80px 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr;
 }
 
-.proyectoPrincipal-content img{
+.proyectoPrincipal-content h3 {
+    align-items: center;
+}
+
+.proyectoPrincipal-content img {
     grid-column: 1;
     width: 60%;
     display: inline-block;
     margin: 20px 0;
 }
 
-.proyectoPrincipal-info{
+.proyectoPrincipal-info {
     grid-column: 2;
     margin-right: 22%;
 }
 
-.proyectoPrincipal-info h2{
+.proyectoPrincipal-info h2 {
     margin-bottom: 5%;
+    margin-top: 120px;
 }
 
-.proyectoPrincipal-info p{
-    margin-bottom: 10%;
+.proyectoPrincipal-info p {
+    margin-bottom: 5%;
 }
 
 .proyectos-btn {
@@ -180,23 +178,6 @@ body {
 .proyectos-book p {
     margin-bottom: 30px;
 }
-
-.enlaces p a{
-    margin-right: 230px;
-}
-
-.enlaces p a:last-child{
-    margin-right: 0;
-}
-
-.enlaces p{
-    margin-top: 40px;
-}
-
-.enlaces p{
-    color: green;
-}
-
 footer {
     width: 100%;
     height: 75px;
@@ -212,30 +193,112 @@ footer p {
     padding-top: 18px;
 }
 
-.titulo-ciudades{
-    text-align: center;
-    color: black;
-    font-weight: 700;
-}
-.enlaces-titulo{
+.titulo-ciudades {
     text-align: center;
     color: black;
     font-weight: 700;
 }
 
-.titulo-info{
-    color: black;
-    font-weight: 700;
-}
-
-.titulo-aficiones{
+.enlaces-titulo {
     text-align: center;
     color: black;
     font-weight: 700;
 }
 
-.UltimasTareas{
+.titulo-info {
+    margin-left: 110px;
+    position: relative;
+    top: 2rem;
+}
+
+.titulo-aficiones {
     text-align: center;
     color: black;
     font-weight: 700;
+}
+
+.Titulo-galeria {
+    text-align: center;
+    color: black;
+    font-weight: 700;
+}
+
+.UltimasTareas {
+    text-align: center;
+    color: black;
+    font-weight: 700;
+}
+
+.ImagenYo {
+    border-radius: 100px;
+    margin-left: 90px;
+    margin-right: 5%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 25rem;
+    float: left;
+}
+
+.container1 {
+    background-color: rgb(84, 168, 233);
+    padding-bottom: 200px;
+    display: block;
+}
+
+#InfoMi {
+    margin-bottom: 110px;
+    margin-right: 300px;
+}
+
+#InfoMi h3 {
+    font-size: xx-large;
+    color: black;
+    font-weight: 700;
+}
+
+#InfoMi p {
+    margin-top: 5%;
+}
+
+#nombre {
+    margin-top: 10%;
+    margin-left: 45%;
+    margin-right: 20%;
+}
+
+#parrafito {
+    margin-left: 30%;
+    margin-right: 20%;
+}
+
+@media screen and (max-width:640px) {
+    .ImagenYo {
+        height: 10rem ;
+    }
+
+    .proyectos-btn {
+        padding: 5px 10px;
+        font-size: 8pt;
+    }
+}
+
+
+.enlaces p a {
+    margin-right: 148px;
+    color: green !important;
+    font-weight: bolder;
+    font-size: 30px;
+    text-decoration: none;
+}
+.enlaces p a:hover{
+    text-decoration: underline dashed black !important;
+    color: red !important;
+}
+
+.enlaces p a:last-child {
+    margin-right: 0;
+}
+
+.enlaces p {
+    margin-top: 40px;
 }
