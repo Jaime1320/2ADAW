@@ -6,4 +6,67 @@ body {
 h1 {
   font-family: sans-serif, helvetica, arial;
   color: red;
+}
+
+p {
+  color: blue;
+  font-family: sans-serif, helvetica, arial;
+}
+
+/*Uso de ainidacion*/
+.caja {
+  border: 1px solid black;
+  margin: 0px auto;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+}
+.caja h2 {
+  color: blue;
+}
+.caja p {
+  color: green;
+}
+.caja .info .autor {
+  font-size: 14px;
+  color: orange;
+}
+
+/*Mixins - Funciones*/
+.caja {
+  border: 5px solid red;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px black;
+}
+
+.caja2 {
+  border: 20px solid yellow;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px black;
+}
+
+.listadoMixin {
+  border: 20px solid green;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px blue;
+  margin-bottom: 50px;
+}
+
+.alerta-exito, .alerta-peligro, .alerta {
+  border: 20px solid gray;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px black;
+  padding: 10px;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.alerta-peligro {
+  background-color: red;
+  color: white;
+}
+
+.alerta-exito {
+  background-color: green;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
