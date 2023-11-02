@@ -1,0 +1,28 @@
+div{
+    width: 100px; 
+    height: 100px;  
+    margin-left: 0;
+    position: absolute;
+}
+
+* {
+    margin: 0;
+
+    
+}
+#div1{
+    background-color: red;
+    margin-top: 50px;
+}
+#div2{
+    background-color: blue;
+    margin-top: 160px;
+}
+#div3{
+    background-color: green;
+    margin-top: 270px;
+}
+#div4{
+    background-color: yellow;
+    margin-top: 380px;
+}

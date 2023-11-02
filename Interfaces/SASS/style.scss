@@ -1,0 +1,13 @@
+/*Variable*/
+$fuente-tipica: sans-serif, helvetica, arial;
+$color-fondo: #ccc;
+$color-letra:red;
+
+body {
+    background-color: $color-fondo;
+}
+
+h1 {
+    font-family: $fuente-tipica;
+    color: $color-letra;
+}
