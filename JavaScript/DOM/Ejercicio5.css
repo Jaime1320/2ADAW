@@ -1,0 +1,14 @@
+.clase1{
+    background-color:brown;
+    border: 15px solid black;
+    width: 500px;
+    color: salmon;
+    font-size: 30px;
+}
+.clase2{
+    background-color:lightgreen;
+    border: 10px solid darkblue;
+    width: 250px;
+    color: black;
+    font-size: 20px;
+}

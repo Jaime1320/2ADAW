@@ -1,0 +1,21 @@
+body>ul>li{
+    background-color: lightblue;
+    border: 3px solid black;
+}
+#ul0{
+    background-color: lightgreen;
+    border: 1px solid black;
+    display: none;
+}
+#ul1{
+    background-color: lightgreen;
+    border: 1px solid black;
+    display: none;
+}
+#ul2{
+    background-color: lightgreen;
+    border: 1px solid black;
+    display: none;
+  
+
+}

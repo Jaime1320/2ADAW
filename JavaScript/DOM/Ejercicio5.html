@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 5</title>
+    <link rel="stylesheet" href="Ejercicio5.css">
 </head>
 <body>
-    
+    <h1>Ejercicio 5</h1>
+    <div class="clase1">
+        <p>Crear un documento con un párrafo y un botón. Al pulsar el botón se debe cambiar el color del párrafo a rojo.</p>
+    </div>
+    <script>
+        document.querySelector("p").addEventListener("click",cambiarClase);
+        function cambiarClase(){
+            var parrafo1 = document.getElementsByTagName("div");
+            if(parrafo1[0].className == "clase1"){
+                parrafo1[0].className = "clase2";
+            }else{
+                parrafo1[0].className = "clase1";
+            }
+        }
+    </script>
 </body>
 </html>

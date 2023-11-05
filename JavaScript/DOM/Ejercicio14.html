@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14</title>
+    <link rel="stylesheet" href="Ejercicio14.css">
+</head>
+<body>
+    <h1>Ejercicio 14</h1>
+
+    <ul>
+        <li >Inicio</li>
+        <ul id="ul0">
+            <li>Portada</li>
+            <li>Acerca de mi</li>
+            <li>Mis fotos</li>
+        </ul>
+        <li>Proyectos</li>
+        <ul id="ul1">
+            <li>Web apps</li>
+            <li>Mobile apps</li>
+            <li>Juegos</li>
+        </ul>
+        <li>Protfolio</li>
+        <ul id="ul2">
+            <li>Paginas Webs</li>
+            <li>Software</li>
+        </ul>
+    </ul>
+
+    <script>
+        const arrayli = document.querySelectorAll("body>ul>li");
+        const arrayul = document.querySelectorAll("li+ul>li");
+        let ul0 = document.getElementById("ul0");
+        let ul1 = document.getElementById("ul1");
+        let ul2 = document.getElementById("ul2");
+        console.log(arrayul);
+        arrayli.forEach((li) => {
+            li.addEventListener("click",() => {
+                if(li.nextElementSibling.style.display == "block"){
+                    li.nextElementSibling.style.display = "none";
+                }else{
+                    arrayli.forEach((elemento) => {
+                    elemento.nextElementSibling.style.display = "none";
+                    });
+                    li.nextElementSibling.style.display = "block";
+                }   
+            });
+
+        });
+    </script>
+</body>
+</html>
