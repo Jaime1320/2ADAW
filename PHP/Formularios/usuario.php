@@ -129,11 +129,6 @@
     <?php
     if(isset($usuario) && isset($nombre) && isset($apellidos) && isset($fecha_nacimiento)) {
 
-        echo "<h3>usuario: $usuario</h3>";
-        echo "<h3>nombre: $nombre</h3>";
-        echo "<h3>apellidos: $apellidos</h3>";
-        echo "<h3>fecha de nacimiento: $fecha_nacimiento</h3>";
-
         $sql = "INSERT INTO usuarios (usuario , nombre , apellidos , fecha_nacimiento)
         VALUES ('$usuario' , '$nombre' , '$apellidos' , '$fecha_nacimiento')";
 

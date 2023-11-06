@@ -9,6 +9,8 @@
 </head>
 
 <body>
+    
+
     <?php
     function depurar($entrada)
     {
@@ -96,6 +98,7 @@
         $conexion -> query($sql);
     }
     ?>
+    
 </body>
 
 </html>
