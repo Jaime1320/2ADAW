@@ -1,0 +1,15 @@
+.clase1{
+    width: 200px;
+    height: 200px;
+    background-color: salmon;
+    font-size: 20px;
+    font-weight: 700;
+    border: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
