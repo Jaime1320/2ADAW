@@ -43,6 +43,8 @@
                     <th>Titulo</th>
                     <th>Distribuidora</th>
                     <th>Precio</th>
+                    <th></th>
+                    <th></th>
                 </tr>
             <tbody>
                 <?php
@@ -62,9 +64,22 @@
                     echo "<td>" . $row["titulo"] . "</td>";
                     echo "<td>" . $row["distribuidora"] . "</td>";
                     echo "<td>" . $row["precio"] . "</td>";
-                    echo "</tr>";
+                    ?> 
+                    <td>
+                        <form action="view_videogame.php" method="get">
+                            <input type="hidden" name="titulo" value="<?php echo $row['titulo'] ?>">
+                            <input class="btn btn-success" type="submit" value="Ver">
+                        </form>
+                    </td>
+                    <td>
+                        <form action="delete_videogames.php" method="get">
+                            <input type="hidden" name="titulo" value="<?php echo $row['titulo'] ?>">
+                            <input class="btn btn-danger" type="submit" value="Eliminar">
+                        </form>
+                    </td>
+                    <?php
                 }
-                ?>
+                ?>     
             </tbody>
             </thead>
         </table>

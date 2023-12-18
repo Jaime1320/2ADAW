@@ -20,7 +20,7 @@
             $sql -> bind_param("ssd", $titulo,$distribuidora,$precio);
             $sql ->execute();
             $conexion ->close();
-
+            
         }
     ?>
 
