@@ -35,6 +35,21 @@
                         <option value="desc">Descendente</option>
                     </select>
                 </div>
+                <div class="container">
+                    <input type="checkbox" name="distribuidora[]" value="rockstar">
+                    <label for="">rockstar</label>
+                    <br>
+                    <input type="checkbox" name="distribuidora[]" value="Ralillointhahood">
+                    <label for="">Ralillointhahood</label>
+                    <br>
+                    <input type="checkbox" name="distribuidora[]" value="epic">
+                    <label for="">epic</label>
+                    <br>
+                </div>
+                <div class="row mb-3">
+                    <input type="text" name="rango1" placeholder="rango 1">
+                    <input type="text" name="rango2" placeholder="rango 2">
+                </div>
             </div>
         </form>
         <table class="table table-dark table-striped">
@@ -52,7 +67,23 @@
                     $titulo = $_POST["titulo"];
                     $campo = $_POST["campo"];
                     $orden = $_POST["orden"];
-                    $sql = $conexion->prepare("Select * from videojuegos where titulo like CONCAT ('%',?,'%') order by $campo $orden");
+                    $distribuidoras = $_POST["distribuidora"] ?? "";
+                    $busqueda = "titulo";
+                    if(empty($_POST["rango1"])){
+                        $_POST["rango1"] = PHP_FLOAT_MIN;
+                    }
+                    if(empty($_POST["rango2"])){
+                        $_POST["rango2"] = PHP_FLOAT_MAX;
+                    }
+                    if($campo == "distribuidora"){
+                        $busqueda = "distribuidora";
+                    }
+                    if($distribuidoras != ""){
+                        $seleccionadas = "and distribuidora in ('".implode("','",$distribuidoras)."')";
+                    }
+                    $rango1 = $_POST["rango1"];
+                    $rango2 = $_POST["rango2"];
+                    $sql = $conexion->prepare("Select * from videojuegos where  $busqueda  like CONCAT ('%',?,'%') and precio between $rango1 and $rango2 $seleccionadas order by $campo $orden");
                     $sql -> bind_param("s" , $titulo);
                 }else if($_SERVER["REQUEST_METHOD"] == "GET"){
                     $sql = $conexion->prepare("Select * from videojuegos");
