@@ -6,10 +6,5 @@ document.querySelectorAll("input")[4].addEventListener("click", function(ev){
         if(opciones[i].checked){
             document.querySelector("textarea").value += opciones[i].value + "\n";
         }
-        
     }
 })
-
-
-
-
