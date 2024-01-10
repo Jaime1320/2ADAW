@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Bebida;
 
 class BebidaController extends Controller
 {
@@ -13,12 +14,14 @@ class BebidaController extends Controller
     {
         $mensaje = "Estas son mis bebidas";
 
-        $bebidas = [
-            ["Cola",1.3,"Refresco"],
-            ["Fanta de naranja",1.30,"Refresco"],
-            ["Cerveza",1,"Alcohol"],
-            ["Ron Barcelo",4,"Alcohol"]
-        ];
+        // $bebidas = [
+        //     ["Cola",1.3,"Refresco"],
+        //     ["Fanta de naranja",1.30,"Refresco"],
+        //     ["Cerveza",1,"Alcohol"],
+        //     ["Ron Barcelo",4,"Alcohol"]
+        // ];
+
+        $bebidas = Bebida::all();
 
         return view('bebidas/index',
             ['mensaje' => $mensaje,'bebidas' => $bebidas]
@@ -30,7 +33,7 @@ class BebidaController extends Controller
      */
     public function create()
     {
-        //
+        return view('bebidas/create');
     }
 
     /**
@@ -38,7 +41,13 @@ class BebidaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $bebida = new Bebida;
+        $bebida-> nombre = $request -> input('nombre');
+        $bebida-> precio = $request -> input('precio');
+        $bebida-> tipo =$request -> input('tipo');
+        $bebida -> save();
+
+        return redirect('bebidas');
     }
 
     /**
@@ -46,7 +55,9 @@ class BebidaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $bebida = Bebida::find($id);
+
+        return view('bebidas/show', ['bebida'=>$bebida]);
     }
 
     /**

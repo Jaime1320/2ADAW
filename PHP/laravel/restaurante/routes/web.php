@@ -28,6 +28,6 @@ Route::get('/adios', function () {
 // Route::get('/platos', [PlatoController::class,'index']);
 Route::resource('/platos', PlatoController::class);
 
-Route::resource('/bebida', BebidaController::class);
+Route::resource('/bebidas', BebidaController::class);
 
 Route::resource('/carta', CartaController::class);

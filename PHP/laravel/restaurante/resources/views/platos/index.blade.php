@@ -31,9 +31,9 @@
             ?> --}}
             @foreach ($platos as $plato)
             <tr>
-                <td>{{$plato[0]}}</td>
-                <td>{{$plato[1]}}</td>
-                <td>{{$plato[2]}}</td>
+                <td>{{$plato->nombre}}</td>
+                <td>{{$plato->precio}}</td>
+                <td>{{$plato->tipo}}</td>
             </tr>
             @endforeach
         </tbody>
