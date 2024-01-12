@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      .menu__list {
+        text-decoration: none;
+        list-style: none;
+        line-height: 50px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <header class="header col-21 bg-primary bg-opacity-75 p-2 pl-5 text-white">
+          <h1>Nuestra web full bootstrap</h1>
+        </header>
+        <nav class="menu col-8 bg-secondary col-sm-12 col-md-8 text-white">
+          <ul class="menu__list row w-75">
+            <li class="col-12 col-sm-12 col-md">Inicio</li>
+            <li class="col-12 col-sm-12 col-md">Pag. 1</li>
+            <li class="col-12 col-sm-12 col-md">Pag. 2</li>
+            <li class="col-12 col-sm-12 col-md">Contacto</li>
+          </ul>
+        </nav>
+        <!-- en responsive para ocultar en tamaños concretos -->
+        <nav class="menu col-4 bg-success text-white d-block d-sm-none d-none d-md-block">
+            <ul class="menu__list row">
+                <li class="col-12 col-sm-12 col-md">Info A</li>
+                <li class="col-12 col-sm-12 col-md">Info B</li>
+            </ul>
+        </nav>
+        </div>
+    </div>
+    </body>
+</html>
