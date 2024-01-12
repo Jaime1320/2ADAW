@@ -9,12 +9,15 @@
 <body>
     <h1>Estas son mis Bebidas</h1>
     <h2>{{ $mensaje }}</h2>
-    <table>
+    <table border="1px">
         <thead>
             <tr>
                 <th>Nombre</th>
                 <th>Precio</th>
                 <th>Tipo</th>
+                <th>Ver bebida</th>
+                <th>Editar bebida</th>
+                <th>Borrar bebida</th>
             </tr>
         </thead>
         <tbody>
@@ -23,6 +26,23 @@
                 <td>{{$bebida->nombre}}</td>
                 <td>{{$bebida->precio}}</td>
                 <td>{{$bebida->tipo}}</td>
+                <td>
+                    <form action="{{route('bebidas.show',['bebida' => $bebida ->id])}}" method="get">
+                        <input type="submit" value="Ver">
+                    </form>
+                </td>
+                <td>
+                    <form action="{{route('bebidas.edit',['bebida' => $bebida ->id])}}" method="get">
+                        <input type="submit" value="Editar">
+                    </form>
+                </td>
+                <td>
+                    <form action="{{route('bebidas.destroy',['bebida' => $bebida ->id])}}" method="post">
+                        @csrf
+                        {{method_field('DELETE')}}
+                        <input type="submit" value="Borrar">
+                    </form>
+                </td>
             </tr>
             @endforeach
         </tbody>

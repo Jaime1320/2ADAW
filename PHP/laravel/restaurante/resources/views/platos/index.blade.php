@@ -8,12 +8,19 @@
 <body>
     <h1>Estos son mis platillos</h1>
     <h2>{{ $mensaje }}</h2>
-    <table>
+
+    <p>
+        <a href="{{route('platos.create')}}">Crear Plato</a>
+    </p>
+    <table border="1px">
         <thead>
             <tr>
                 <th>Plato</th>
                 <th>Precio</th>
                 <th>Racion</th>
+                <th>Ver Plato</th>
+                <th>Editar Plato</th>
+                <th>Borrar Plato</th>
             </tr>
         </thead>
         <tbody>
@@ -34,6 +41,23 @@
                 <td>{{$plato->nombre}}</td>
                 <td>{{$plato->precio}}</td>
                 <td>{{$plato->tipo}}</td>
+                <td>
+                    <form action="{{route('platos.show',['plato' => $plato ->id])}}" method="get">
+                        <input type="submit" value="Ver">
+                    </form>
+                </td>
+                <td>
+                    <form action="{{route('platos.edit',['plato' => $plato ->id])}}" method="get">
+                        <input type="submit" value="Editar">
+                    </form>
+                </td>
+                <td>
+                    <form action="{{route('platos.destroy',['plato' => $plato ->id])}}" method="post">
+                        @csrf
+                        {{method_field('DELETE')}}
+                        <input type="submit" value="Borrar">
+                    </form>
+                </td>
             </tr>
             @endforeach
         </tbody>
