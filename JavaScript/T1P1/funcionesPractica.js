@@ -63,6 +63,7 @@ function ejercicio3(){
     }while(numero<5||numero>10||isNaN(numero));
 }
 
+
 function ejercicio4(){
     let matriz = [];
     let arrayMa = [];
@@ -98,7 +99,7 @@ function ejercicio4(){
     media =  suma/(num*num);
     console.log("La media de todos los valores es: " + media);
 
-    /*APARTADO D ESTA MALL*/
+    /*APARTADO D ESTA MAL*/
     for (i = 0; i < num; i++) {
         let filaNueva1 = ' ';
         let filaNueva2 = ' ';
