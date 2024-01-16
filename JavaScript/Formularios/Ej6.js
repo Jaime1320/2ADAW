@@ -8,7 +8,7 @@ document.querySelectorAll("input[type='checkbox']").forEach(function(element){
             if (opciones.includes(element.value)){
                 for (var i = 0; i < desplegable.options.length; i++) {
                     if (desplegable.options[i].value == element.value) {
-                      desplegable.removeChild(desplegable.options[i]);
+                        desplegable.removeChild(desplegable.options[i]);
                     }
                 }
             }else{

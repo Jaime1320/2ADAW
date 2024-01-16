@@ -18,9 +18,9 @@
                 <th>Plato</th>
                 <th>Precio</th>
                 <th>Racion</th>
-                <th>Ver Plato</th>
-                <th>Editar Plato</th>
-                <th>Borrar Plato</th>
+                <th>Ver</th>
+                <th>Editar</th>
+                <th>Borrar</th>
             </tr>
         </thead>
         <tbody>
@@ -38,9 +38,9 @@
             ?> --}}
             @foreach ($platos as $plato)
             <tr>
-                <td>{{$plato->nombre}}</td>
-                <td>{{$plato->precio}}</td>
-                <td>{{$plato->tipo}}</td>
+                <td>{{ $plato->nombre }}</td>
+                <td>{{ $plato->precio }}</td>
+                <td>{{ $plato->tipo_plato->tipo }}</td>
                 <td>
                     <form action="{{route('platos.show',['plato' => $plato ->id])}}" method="get">
                         <input type="submit" value="Ver">

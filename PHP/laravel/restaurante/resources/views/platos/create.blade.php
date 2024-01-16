@@ -15,9 +15,9 @@
         <input type="number" step="0.1" name="precio"><br><br>
         <label>Tipo:</label>
         <select name="tipo">
-            <option value="Racion">Racion</option>
-            <option value="Media Racion">Media racion</option>
-            <option value="Tapa">Tapa</option>
+            <option value="1">Racion</option>
+            <option value="2">Media racion</option>
+            <option value="3">Tapa</option>
         </select>
         <br><br>
         <input type="submit" value="Crear">
