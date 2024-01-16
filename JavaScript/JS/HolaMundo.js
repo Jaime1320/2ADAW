@@ -95,7 +95,7 @@ c -= 2;
 console.log(c);
 
 //Estructura switch
-let mes = 2;
+let mes =2 ;
 let estacion = "desconocida";
 
 switch (mes) {
