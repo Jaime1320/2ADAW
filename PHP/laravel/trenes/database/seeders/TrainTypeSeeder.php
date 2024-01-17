@@ -18,10 +18,10 @@ class TrainTypeSeeder extends Seeder
                 'type' => 'Cercanías',
             ],
             [
-                'name' => 'Media Distancia',
+                'type' => 'Media Distancia',
             ],
             [
-                'name' => 'Alta Velocidad',
+                'type' => 'Alta Velocidad',
             ]
         ]);
     }

@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-
+use DB;
 class TicketTypeSeeder extends Seeder
 {
     /**
@@ -17,10 +17,11 @@ class TicketTypeSeeder extends Seeder
                 'type' => 'Billete sencillo',
             ],
             [
-                'name' => 'Abono mensual',
+                'type' => 'Abono mensual',
             ],
             [
-                'name' => 'Abono trimestral',
+                'type' => 'Abono trimestral',
+               
             ]
         ]);
     }

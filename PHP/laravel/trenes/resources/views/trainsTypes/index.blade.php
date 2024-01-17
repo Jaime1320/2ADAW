@@ -7,21 +7,17 @@
     <title>Tipos de tren</title>
 </head>
 <body>
-    <a href="{{route('train_types.create')}}">Crear cancion</a>
+    {{-- <a href="{{route('trainTypes.create')}}">Crear tipo de tren</a> --}}
     <table>
             <thead>
                 <tr>
-                    <th>Nombre cancion</th>
-                    <th>Genero cancion</th>
-                    <th>Duracion</th>
+                    <th>Tipo de tren</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($canciones as $cancion)
+                @foreach ($trainTypes as $trainType)
                     <tr>
-                        <td>{{ $cancion->titulo_cancion }}</td>
-                        <td>{{ $cancion->genero_cancion }}</td>
-                        <td>{{ $cancion->duracion }}</td>
+                        <td>{{ $trainType->type }}</td>
                     </tr>
                 @endforeach
             </tbody>
