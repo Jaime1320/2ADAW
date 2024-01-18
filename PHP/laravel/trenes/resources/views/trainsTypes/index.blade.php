@@ -7,7 +7,7 @@
     <title>Tipos de tren</title>
 </head>
 <body>
-    {{-- <a href="{{route('trainTypes.create')}}">Crear tipo de tren</a> --}}
+    <a href="{{route('trainsTypes.create')}}">Crear tipo de tren</a>
     <table>
             <thead>
                 <tr>

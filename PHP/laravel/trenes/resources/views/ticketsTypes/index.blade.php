@@ -15,7 +15,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($tickettypes as $tickettype)
+                @foreach ($ticketTypes as $tickettype)
                     <tr>
                         <td>{{ $tickettype->type }}</td>
                     </tr>

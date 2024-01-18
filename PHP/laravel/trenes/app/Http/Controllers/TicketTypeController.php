@@ -18,7 +18,7 @@ class TicketTypeController extends Controller
 
         return view(
             'ticketsTypes/index',
-            ['tickettypes' => $ticketstype]
+            ['ticketTypes' => $tickettype]
         );
 
     }
@@ -28,7 +28,7 @@ class TicketTypeController extends Controller
      */
     public function create()
     {
-        //
+        return view('ticketsTypes/create', ['ticket_types' =>TicketType::all()]);
     }
 
     /**
@@ -36,7 +36,11 @@ class TicketTypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $type = new TicketType;
+        $type->type = $request->input('type');
+        $type->save();
+
+        return redirect('ticketsTypes');
     }
 
     /**
