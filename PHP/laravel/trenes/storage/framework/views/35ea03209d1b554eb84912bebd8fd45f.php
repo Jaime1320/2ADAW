@@ -23,7 +23,7 @@
                     <td><?php echo e($train->name); ?></td>
                     <td><?php echo e($train->passengers); ?></td>
                     <td><?php echo e($train->year); ?></td>
-                    <td><?php echo e($train->train_type_id); ?></td>
+                    <td><?php echo e($train->train_type->type); ?></td>
                 </tr>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </tbody>

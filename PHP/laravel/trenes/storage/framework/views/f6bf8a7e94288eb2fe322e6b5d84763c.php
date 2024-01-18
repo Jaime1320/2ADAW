@@ -13,6 +13,7 @@
             <tr>
                 <th>Fecha</th>
                 <th>Precio</th>
+                <th>Nombre de tren</th>
                 <th>Tipo de ticket</th>
             </tr>
         </thead>
@@ -21,7 +22,7 @@
                 <tr>
                     <td><?php echo e($ticket->date); ?></td>
                     <td><?php echo e($ticket->price); ?></td>
-                    <td><?php echo e($ticket->train_name->name); ?></td>
+                    <td><?php echo e($ticket->train->name); ?></td>
                     <td><?php echo e($ticket->ticket_type->type); ?></td>
                 </tr>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

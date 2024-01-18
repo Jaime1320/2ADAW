@@ -9,9 +9,9 @@ class Train extends Model
 {
     use HasFactory;
     
-    public function artista_cancion()
+    public function train_type()
     {
-        return $this->belongsTo(Artista::class, 'artista_id');
+        return $this->belongsTo(TrainType::class);
     }
 
 }

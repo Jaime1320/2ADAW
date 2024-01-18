@@ -23,7 +23,7 @@
                     <td>{{ $train->name }}</td>
                     <td>{{ $train->passengers }}</td>
                     <td>{{ $train->year }}</td>
-                    <td>{{ $train->train_type_id }}</td>
+                    <td>{{ $train->train_type->type }}</td>
                 </tr>
             @endforeach
         </tbody>
