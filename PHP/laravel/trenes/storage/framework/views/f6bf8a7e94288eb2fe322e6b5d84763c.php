@@ -24,6 +24,24 @@
                     <td><?php echo e($ticket->price); ?></td>
                     <td><?php echo e($ticket->train->name); ?></td>
                     <td><?php echo e($ticket->ticket_type->type); ?></td>
+                    <td>
+                        <form action="<?php echo e(route('tickets.show', ['ticket' => $ticket->id])); ?>">
+                        <input type="submit" value="Ver">
+                        </form>
+                    </td>
+                    <td>
+                        <form action="<?php echo e(route('tickets.edit', ['ticket' => $ticket->id])); ?>" method="get">
+                            <input type="submit" value="Editar">
+                        </form>
+                    </td>
+                    <td>
+                    <form action="<?php echo e(route('tickets.destroy', ['ticket' => $ticket->id])); ?>" method="post">
+                        <?php echo csrf_field(); ?>
+                        <?php echo e(method_field('DELETE')); ?>
+
+                        <input type="submit" value="Borrar">
+                    </form>
+                    </td>
                 </tr>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </tbody>

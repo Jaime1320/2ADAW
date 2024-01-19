@@ -24,6 +24,23 @@
                     <td>{{ $ticket->price }}</td>
                     <td>{{ $ticket->train->name }}</td>
                     <td>{{ $ticket->ticket_type->type }}</td>
+                    <td>
+                        <form action="{{ route('tickets.show', ['ticket' => $ticket->id]) }}">
+                        <input type="submit" value="Ver">
+                        </form>
+                    </td>
+                    <td>
+                        <form action="{{ route('tickets.edit', ['ticket' => $ticket->id]) }}" method="get">
+                            <input type="submit" value="Editar">
+                        </form>
+                    </td>
+                    <td>
+                    <form action="{{ route('tickets.destroy', ['ticket' => $ticket->id]) }}" method="post">
+                        @csrf
+                        {{ method_field('DELETE') }}
+                        <input type="submit" value="Borrar">
+                    </form>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

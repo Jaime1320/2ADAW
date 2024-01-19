@@ -60,7 +60,7 @@ class TicketController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('tickets/edit', ['ticket' => Ticket::find($id), 'trains' => Train::all(),'ticketTypes' => TicketType::all()]);
     }
 
     /**
@@ -68,7 +68,18 @@ class TicketController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $ticket = Ticket::find($id);
+
+
+        $ticket->date = $request->input('date');
+        $ticket->price = $request->input('price');
+        $ticket->train_id = $request->input('train_id');
+        $ticket->ticket_type_id = $request->input('ticket_type_id');
+        $ticket->save();
+
+
+        return redirect('tickets');
+
     }
 
     /**
@@ -76,6 +87,7 @@ class TicketController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Ticket::find($id)->delete();
+        return redirect('tickets');
     }
 }

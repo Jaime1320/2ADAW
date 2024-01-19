@@ -24,6 +24,23 @@
                     <td><?php echo e($train->passengers); ?></td>
                     <td><?php echo e($train->year); ?></td>
                     <td><?php echo e($train->train_type->type); ?></td>
+                    <td><form action="<?php echo e(route('trains.show', ['train' => $train->id])); ?>">
+                        <input type="submit" value="Ver">
+                    </form>
+                    </td>
+                    <td>
+                        <form action="<?php echo e(route('trains.edit', ['train' => $train->id])); ?>">
+                        <input type="submit" value="Editar">
+                        </form>
+                    </td>
+                    <td>
+                        <form action="<?php echo e(route('trains.destroy', ['train' => $train->id])); ?>" method="post">
+                            <?php echo csrf_field(); ?>
+                            <?php echo e(method_field('DELETE')); ?>
+
+                            <input type="submit" value="Borrar">
+                        </form>
+                    </td>
                 </tr>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </tbody>
