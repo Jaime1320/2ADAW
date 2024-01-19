@@ -8,7 +8,7 @@
 </head>
 <body>
     <a href="<?php echo e(route('trains.create')); ?>">Crear tren</a>
-    <table>
+    <table border="2px solid black">
         <thead>
             <tr>
                 <th>Nombre</th>

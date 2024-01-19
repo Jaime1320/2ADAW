@@ -8,7 +8,7 @@
 </head>
 <body>
     <a href="{{route('ticketsTypes.create')}}">Crear tipo de ticket</a>
-    <table>
+    <table border="2px solid black">
             <thead>
                 <tr>
                     <th>Tipo de ticket</th>
