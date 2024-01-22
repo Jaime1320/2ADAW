@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="css/loader.css">
     <link rel="stylesheet" href="css/responsive.css">    
     
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+
     <title>Curriculum Vitae</title>
 </head>
 <body>
@@ -157,6 +162,10 @@
                                     </div>
                                 </section>
                                 <section class="form__right">
+                                    <div class="form__group">
+                                        <input type="text" id="fecha" class="form__input" required placeholder="Fecha">
+                                        <label class="form__label">Fecha</label>
+                                    </div>
                                     <div class="form__group">
                                         <textarea class="form__input form__input--textarea" name="message" required placeholder="Mensaje"></textarea>
                                         <label for="message" class="form__label">Mensaje</label>
