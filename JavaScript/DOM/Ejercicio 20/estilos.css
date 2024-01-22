@@ -1,0 +1,15 @@
+.clase1{
+    width: 500px;
+    height: 100%;
+    border: 2px solid red;
+    font-size: 20px;
+}
+.clase2{
+    width: 800px;
+    height: 50%;
+    border: 4px solid green;
+    font-size: 15px;
+}
+.tablita, td{
+    border: 2px solid springgreen;
+}
