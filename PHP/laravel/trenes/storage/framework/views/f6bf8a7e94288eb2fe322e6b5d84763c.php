@@ -8,7 +8,7 @@
 </head>
 <body>
     <a href="<?php echo e(route('tickets.create')); ?>">Crear ticket</a>
-    <table>
+    <table border="2px solid black">
         <thead>
             <tr>
                 <th>Fecha</th>
