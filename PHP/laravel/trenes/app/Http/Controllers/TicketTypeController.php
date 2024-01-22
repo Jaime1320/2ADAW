@@ -13,12 +13,12 @@ class TicketTypeController extends Controller
      */
     public function index()
     {
-        $tickettype = TicketType::all();
+        $ticketType = TicketType::all();
 
 
         return view(
             'ticketsTypes/index',
-            ['ticketTypes' => $tickettype]
+            ['ticketTypes' => $ticketType]
         );
 
     }
@@ -48,7 +48,7 @@ class TicketTypeController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view('ticketsTypes/show', ['ticketType' => TicketType::find($id)]);
     }
 
     /**
@@ -56,7 +56,7 @@ class TicketTypeController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('ticketsTypes/edit', ['ticketsType' =>TicketType::find($id)]);
     }
 
     /**
@@ -64,7 +64,13 @@ class TicketTypeController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $ticketsType = TicketType::find($id);
+
+        $ticketsType->type = $request->input('type');
+        $ticketsType->save();
+
+
+        return redirect('tickets');
     }
 
     /**
@@ -72,6 +78,7 @@ class TicketTypeController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        TicketType::find($id)->delete();
+        return redirect('ticketsTypes');
     }
 }

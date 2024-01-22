@@ -7,7 +7,7 @@
     <title>Ver Tren</title>
 </head>
 <body>
-    <table>
+    <table border="2px solid black">
         <thead>
             <tr>
                 <th>Nombre</th>
