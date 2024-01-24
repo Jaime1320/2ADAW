@@ -17,7 +17,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 
     <title>Curriculum Vitae</title>
 </head>
@@ -39,6 +39,11 @@
                 <!-- menú de navegación -->
                 <nav class="layout__menu">
                     <ul class="menu__list">
+                        <li class="menu__option">
+                            <button id="oscuro"><i class="fa-solid fa-moon fa-2xl oscuro"></i>
+                            <span class="menu__overlay" id="cambiarSpan">Modo oscuro</span>
+                        </a>
+                        </li>
                         <li class="menu__option">
                             <a href="index.html" class="menu__link">
                                 <i class="menu__icon fa-solid fa-house"></i>
@@ -177,6 +182,12 @@
                     </section>
                 </div>
             </section>
+            <div id="btnGoTop" class="go-top">
+                <button id="scrollToTopBtn">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    <span class="go-top__overlay">Ir Arriba</span>
+                </button>
+            </div>
         </main>
     </div>
     <!-- propiedad defer para que el script se cargue cuando el html se haya cargado -->

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,10 +12,18 @@
     <link rel="stylesheet" href="fonts/poppins/poppins.css">
     <link rel="stylesheet" href="css/scroll.css">
     <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/responsive.css">    
-    
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+        integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
+
     <title>Curriculum Vitae</title>
 </head>
+
 <body>
     <!-- layout principal. Usamos metodología BEM -->
     <div class="layout">
@@ -33,6 +42,11 @@
                 <!-- menú de navegación -->
                 <nav class="layout__menu">
                     <ul class="menu__list">
+                        <li class="menu__option">
+                            <button id="oscuro"><i class="fa-solid fa-moon fa-2xl oscuro"></i>
+                                <span class="menu__overlay" id="cambiarSpan">Modo oscuro</span>
+                                </a>
+                        </li>
                         <li class="menu__option">
                             <a href="index.html" class="menu__link">
                                 <i class="menu__icon fa-solid fa-house"></i>
@@ -99,7 +113,7 @@
                 </div>
 
                 <!-- pié de página -->
-                <footer class="user-info__footer"> 
+                <footer class="user-info__footer">
                     &copy; 2024 Jaime Hermana Caffarena
                 </footer>
             </section>
@@ -126,8 +140,11 @@
                                 <div class="timeline__divider">
                                 </div>
                                 <div class="timeline__description">
-                                    <h3 class="timeline__title">MÁSTER UNIVERSITARIO EN FORMACIÓN DEL PROFESORADO DE EDUCACIÓN SECUNDARIA OBLIGATORIA Y BACHILLERATO, FORMACIÓN PROFESIONAL Y ENSEÑANZAS DE IDIOMAS</h3>
-                                    <p class="timeline__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nihil fuga harum ut, recusandae saepe natus.</p>
+                                    <h3 class="timeline__title">MÁSTER UNIVERSITARIO EN FORMACIÓN DEL PROFESORADO DE
+                                        EDUCACIÓN SECUNDARIA OBLIGATORIA Y BACHILLERATO, FORMACIÓN PROFESIONAL Y
+                                        ENSEÑANZAS DE IDIOMAS</h3>
+                                    <p class="timeline__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Odit nihil fuga harum ut, recusandae saepe natus.</p>
                                 </div>
                             </article>
                             <article class="timelines__timeline">
@@ -139,7 +156,8 @@
                                 </div>
                                 <div class="timeline__description">
                                     <h3 class="timeline__title">ETSI Ingeniería Técnica Informática de Sistemas</h3>
-                                    <p class="timeline__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nihil fuga harum ut, recusandae saepe natus.</p>
+                                    <p class="timeline__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Odit nihil fuga harum ut, recusandae saepe natus.</p>
                                 </div>
                             </article>
                         </div>
@@ -157,7 +175,8 @@
                                 </div>
                                 <div class="timeline__description">
                                     <h3 class="timeline__title">Docente</h3>
-                                    <p class="timeline__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nihil fuga harum ut, recusandae saepe natus.</p>
+                                    <p class="timeline__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Odit nihil fuga harum ut, recusandae saepe natus.</p>
                                 </div>
                             </article>
                             <article class="timelines__timeline">
@@ -169,7 +188,8 @@
                                 </div>
                                 <div class="timeline__description">
                                     <h3 class="timeline__title">Jefe de Unidad</h3>
-                                    <p class="timeline__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nihil fuga harum ut, recusandae saepe natus.</p>
+                                    <p class="timeline__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Odit nihil fuga harum ut, recusandae saepe natus.</p>
                                 </div>
                             </article>
                         </div>
@@ -291,8 +311,15 @@
                         </article>
                     </section>
                 </div>
+                <div id="btnGoTop" class="go-top">
+                    <button id="scrollToTopBtn" class="go-top">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        <span class="go-top__overlay">Ir Arriba</span>
+                    </button>
+                </div>
             </section>
         </main>
     </div>
 </body>
+
 </html>

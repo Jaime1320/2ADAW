@@ -11,7 +11,13 @@
     <link rel="stylesheet" href="fonts/poppins/poppins.css">
     <link rel="stylesheet" href="css/scroll.css">
     <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/responsive.css">    
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
         
     <title>CV Jaime Hermana Caffarena</title>
 </head>
@@ -33,6 +39,11 @@
                 <!-- menú de navegación -->
                 <nav class="layout__menu">
                     <ul class="menu__list">
+                        <li class="menu__option">
+                            <button id="oscuro"><i class="fa-solid fa-moon fa-2xl oscuro"></i>
+                            <span class="menu__overlay" id="cambiarSpan">Modo oscuro</span>
+                        </a>
+                        </li>
                         <li class="menu__option">
                             <a href="index.html" class="menu__link menu__link--active">
                                 <i class="menu__icon fa-solid fa-house"></i>
@@ -95,6 +106,9 @@
 
                 <!-- botón del curriculum -->
                 <div class="user-info__buttons">
+                    <div id="dialog" title="CV">
+                        Este es el CV de Jaime Hermana Caffarena
+                    </div>
                     <a href="#" class="user-info__btn">Descargar CV</a>
                 </div>
 
@@ -104,13 +118,18 @@
                 </footer>
             </section>
         </aside>
-
         <!-- contenido principal -->
         <main class="layout__content">
             <section class="content__page">
                 <h1 class="page__name">Jaime Hermana Caffarena</h1>
                 <h2 class="page__job">Desarrollador Web</h2>
             </section>
+            <div id="btnGoTop" class="go-top">
+                <button id="scrollToTopBtn" class="go-top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    <span class="go-top__overlay">Ir Arriba</span>
+                </button>
+            </div>
         </main>
     </div>
 </body>
