@@ -2,7 +2,7 @@ document.querySelectorAll("input")[0].addEventListener("click",function(){
 
     document.querySelectorAll("input")[1].disabled = false;
 
-    foto = "./img/";
+    let foto = "./img/";
     foto += prompt("Dime la ruta de la imagen");
 
     if(foto == "./img/"){

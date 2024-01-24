@@ -15,7 +15,6 @@ document.querySelectorAll("input")[1].addEventListener("click", function () {
         if (isNaN(tempposi)) {
             posi = -3;
             alert("tus muertos");
-
         } else {
             if (tempposi < 1 || tempposi > listado.length + 1) {
                 posi = -3;

@@ -1,22 +1,14 @@
-let enlace = document.querySelector("a");
+document.querySelectorAll("a")[0].addEventListener("mouseover",function(){
+    let enlace = document.querySelector("a").getAttribute("href");
+    let midiv = document.createElement("div");
+    let Etiquetaa = document.createElement("a");
 
+    Etiquetaa.setAttribute("href" , enlace);
+    midiv.setAttribute("class", "clase1");
+    Etiquetaa.textContent = enlace;
+    Etiquetaa.setAttribute("target" ,"blank");
+    midiv.textContent = "La Url del enlace es: ";
+    midiv.appendChild(Etiquetaa)
+    document.body.appendChild(midiv);
 
-enlace.addEventListener("mouseover", function (){
-    crearDiv();
 })
-enlace.addEventListener("mouseleave", function(){
-    eliminarDiv();
-})
-
-
-function crearDiv(){
-    let nuevodiv = document.createElement('div');
-    nuevodiv.className = "clase1";
-    let textodiv = document.createTextNode("Esto es un enlace");
-    nuevodiv.appendChild(textodiv);
-    document.body.appendChild(nuevodiv);
-    console.log("hola");
-}
-function eliminarDiv(){
-    document.body.removeChild(document.querySelector("div"));
-}
