@@ -9,6 +9,8 @@
     border-radius: 5px;
 }
 
+
+
 .go-top__overlay {
     display: none;
     margin-left: 5px;
@@ -1363,4 +1365,8 @@ body{
 .contact__iframe{
     width: 100%;
     height: 15rem;
+}
+
+.fa-computer {
+    color: black;
 }
