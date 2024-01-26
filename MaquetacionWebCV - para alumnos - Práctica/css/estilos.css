@@ -26,7 +26,7 @@
 /* reseteamos estilos */
 
 
-#oscuro {
+.oscuro {
     border: 0;
     background-color: transparent;
     color: var(--color-icons);
@@ -1050,6 +1050,7 @@ body{
     flex-basis: 33%;
     padding: 0.7rem;
     position: relative; /* necesario para el movimiento de los iconos */
+    margin: 0 auto;
 }
 .gallery__container-image{
     overflow: hidden; /* genero un zoom en interno */
@@ -1370,3 +1371,4 @@ body{
 .fa-computer {
     color: black;
 }
+
