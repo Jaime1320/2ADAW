@@ -34,6 +34,7 @@
 
     <script src="js/script.js" defer></script>
     <script src="js/carousel.js"></script>
+    <script src="js/popup.js" defer></script>
 
     <title>Curriculum Vitae</title>
 </head>
@@ -41,6 +42,29 @@
 <body>
     <!-- layout principal. Usamos metodología BEM -->
     <div class="layout">
+        <!--Creamos el menu hamburguesa-->
+        <nav class="mobile-menu">
+            <a href="#" class="hamburger-wrapper">
+              <div class="hamburger-menu"></div>
+            </a>
+            <div class="mobile-menu-overlay">
+              <ul>
+                <img src="img/default-user.jpg" class="user-info__image_mobile" alt="" />
+                <li class="menu__option">
+                  <a class="oscuro">
+                    <i class="menu__icon fa-solid fa-moon fa-house"></i>
+                    <span class="menu__overlay">Modo oscuro</span>
+                  </a>
+                </li>
+                <li><a class="menu__link menu__link--active" href="index.html">Home</a></li>
+                <li><a class="menu__link" href="sobre-mi.html">Sobre mí</a></li>
+                <li><a class="menu__link" href="curriculum.html">Currículum</a></li>
+                <li><a class="menu__link" href="portafolio.html">Portafolio</a></li>
+                <li><a class="menu__link" href="blog.html">Blog</a></li>
+                <li><a class="menu__link" href="contacto.html">Contacto</a></li>
+              </ul>
+            </div>
+          </nav>
         <!-- barra lateral (info usuario). -->
         <aside class="layout__aside">
             <section class="aside__user-info">
@@ -123,6 +147,9 @@
 
                 <!-- botón del curriculum -->
                 <div class="user-info__buttons">
+                    <div id="dialog" title="CV">
+                        Este es el CV de Jaime Hermana Caffarena
+                    </div>
                     <a href="#" class="user-info__btn">Descargar CV</a>
                 </div>
 
@@ -158,13 +185,11 @@
                             <time datetime="2023-08-30" class="article__date">30/08/2023</time>
                             <a href="#" class="article__link">
                                 <h2 class="article__title">
-                                    Laravel
+                                    Trenes Laravel
                                 </h2>
                             </a>
                             <p class="article__text">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                Consectetur nostrum ex quasi in corrupti animi asperiores
-                                officia autem deserunt odio.
+                                Creamos una pagina con laravel sobre trenes en las cuales tenias todas las funcionalidades de laravel. Podias crear, editar, eliminar y ver trenes, tipos de trenes, tickets y tipos de tickets.
                             </p>
                         </div>
                     </div>
@@ -185,12 +210,10 @@
                         <div class="article__bottom">
                             <time datetime="2023-03-05" class="article__date">05/03/2023</time>
                             <a href="#" class="article__link">
-                                <h2 class="article__title">JavaScript</h2>
+                                <h2 class="article__title">Carrera de divs JavaScript</h2>
                             </a>
                             <p class="article__text">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                Consectetur nostrum ex quasi in corrupti animi asperiores
-                                officia autem deserunt odio.
+                                Creamos una carrera de divs utilizando JavaScript, cambando todas las propiedades utilizando DOM.
                             </p>
                         </div>
                     </div>
@@ -211,18 +234,16 @@
                         <div class="article__bottom">
                             <time datetime="2023-03-05" class="article__date">05/03/2023</time>
                             <a href="#" class="article__link">
-                                <h2 class="article__title">JQuery</h2>
+                                <h2 class="article__title">Proyecto JQuery</h2>
                             </a>
                             <p class="article__text">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                Consectetur nostrum ex quasi in corrupti animi asperiores
-                                officia autem deserunt odio.
+                                Este es el proyecto que hemos creado utilizando HTML, CSS, JavaScript y Jquery principalmente.
                             </p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="article__top">
-                            <div class="article__category">PHP</div>
+                            <div class="article__category">Tienda PHP</div>
                             <a href="#" class="article__image-link">
                                 <div class="article__mask">
                                     <img class="article__image"
@@ -240,13 +261,13 @@
                                 <h2 class="article__title">PHP</h2>
                             </a>
                             <p class="article__text">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                Consectetur nostrum ex quasi in corrupti animi asperiores
-                                officia autem deserunt odio.
+                                Hemos hecho una tienda utilizando PHP, en la cual podias crear una cesta, añadir productos a tu carrito, iniciar y cerrar sesion, crear productos y muchas funcionalidades mas.
                             </p>
                         </div>
                     </div>
                 </div>
+                <br><br><br>
+                <center><h3><a href="https://github.com/Jaime1320/2ADAW">VISITAR MI GITHUB</a></h3></center>
             </section>
             <div id="btnGoTop" class="go-top">
                 <button id="scrollToTopBtn" class="go-top">

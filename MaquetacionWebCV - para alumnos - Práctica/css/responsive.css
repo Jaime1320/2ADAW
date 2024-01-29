@@ -67,6 +67,11 @@
     .layout__menu{
         position: static; /* el elemento ya no me aparece visible */
     }
+
+    /* Responsivo de la hamburguesa */
+    .mobile-menu {
+        display: flex;
+      }
 }
 
 @media (max-width: 800px){

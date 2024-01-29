@@ -20,6 +20,7 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
         integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
+    <script src="js/popup.js" defer></script>
 
     <title>Curriculum Vitae</title>
 </head>
@@ -27,6 +28,29 @@
 <body>
     <!-- layout principal. Usamos metodología BEM -->
     <div class="layout">
+        <!--Creamos el menu hamburguesa-->
+        <nav class="mobile-menu">
+            <a href="#" class="hamburger-wrapper">
+              <div class="hamburger-menu"></div>
+            </a>
+            <div class="mobile-menu-overlay">
+              <ul>
+                <img src="img/default-user.jpg" class="user-info__image_mobile" alt="" />
+                <li class="menu__option">
+                  <a class="oscuro">
+                    <i class="menu__icon fa-solid fa-moon fa-house"></i>
+                    <span class="menu__overlay">Modo oscuro</span>
+                  </a>
+                </li>
+                <li><a class="menu__link menu__link--active" href="index.html">Home</a></li>
+                <li><a class="menu__link" href="sobre-mi.html">Sobre mí</a></li>
+                <li><a class="menu__link" href="curriculum.html">Currículum</a></li>
+                <li><a class="menu__link" href="portafolio.html">Portafolio</a></li>
+                <li><a class="menu__link" href="blog.html">Blog</a></li>
+                <li><a class="menu__link" href="contacto.html">Contacto</a></li>
+              </ul>
+            </div>
+          </nav>
         <!-- barra lateral (info usuario). -->
         <aside class="layout__aside">
             <section class="aside__user-info">
@@ -109,6 +133,9 @@
 
                 <!-- botón del curriculum -->
                 <div class="user-info__buttons">
+                    <div id="dialog" title="CV">
+                        Este es el CV de Jaime Hermana Caffarena
+                    </div>
                     <a href="#" class="user-info__btn">Descargar CV</a>
                 </div>
 
@@ -130,22 +157,22 @@
                             <nav class="portfolio__navbar">
                                 <ul class="portfolio__menu">
                                     <li class="portfolio_option portfolio__option--active">
-                                        <a href="#tabs-1" class="portfolio__link">Tab 1</a>
+                                        <a href="#tabs-1" class="portfolio__link">Deportes</a>
                                     </li>
                                     <li class="portfolio_option">
-                                        <a href="#tabs-2" class="portfolio__link">Tab 2</a>
+                                        <a href="#tabs-2" class="portfolio__link">Música</a>
                                     </li>
                                     <li class="portfolio_option">
-                                        <a href="#tabs-3" class="portfolio__link">Tab 3</a>
+                                        <a href="#tabs-3" class="portfolio__link">Videojuegos</a>
                                     </li>
                                     <li class="portfolio_option">
-                                        <a href="#tabs-4" class="portfolio__link">Tab 4</a>
+                                        <a href="#tabs-4" class="portfolio__link">Cine</a>
                                     </li>
                                     <li class="portfolio_option">
-                                        <a href="#tabs-5" class="portfolio__link">Tab 5</a>
+                                        <a href="#tabs-5" class="portfolio__link">Programacion</a>
                                     </li>
                                     <li class="portfolio_option">
-                                        <a href="#tabs-6" class="portfolio__link">Tab 6</a>
+                                        <a href="#tabs-6" class="portfolio__link">Amigos</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -153,93 +180,81 @@
                                 <figure class="gallery__item" id="tabs-1">
                                     <div class="gallery__container-image">
                                         <a href="#" class="gallery__link">
-                                            <img src="img/galeria-1.jpg" alt="" class="gallery__image" />
+                                            <img src="https://www.gipuzkoa.eus/documents/20933/32665092/03-deportes_3.png.jpg/e35046ab-3cfd-d709-0d65-6b1221001f3b?t=1637930583543" alt="" class="gallery__image" />
                                         </a>
                                     </div>
                                     <figcaption class="gallery__title">
-                                        Producción de video
+                                        Deportes
                                     </figcaption>
                                     <i class="gallery__icon fa-solid fa-video-camera"></i>
-                                    <span class="gallery__category">Videos</span>
+                                    <span class="gallery__category">Deportes</span>
                                     <p class="gallery__text">
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                        Dicta, doloribus vel. Eaque maxime cupiditate voluptatum vero,
-                                        iste tempore velit officia?
+                                        Me gusta realizar los deportes futbol, padel, tenis, golf, natación, ski, ciclismo...
                                     </p>
                                 </figure>
                                 <figure class="gallery__item" id="tabs-2">
                                     <div class="gallery__container-image">
                                         <a href="#" class="gallery__link">
-                                            <img src="img/galeria-2.jpg" alt="" class="gallery__image" />
+                                            <img src="https://media.es.wired.com/photos/6442dda9a566376ee967ba15/16:9/w_2560%2Cc_limit/The-Sludgification-Of-Music-Business-503493283.jpg" alt="" class="gallery__image" />
                                         </a>
                                     </div>
-                                    <figcaption class="gallery__title">Javascript</figcaption>
+                                    <figcaption class="gallery__title">Música</figcaption>
                                     <i class="gallery__icon fa-solid fa-code"></i>
-                                    <span class="gallery__category">Curso</span>
+                                    <span class="gallery__category">Música</span>
                                     <p class="gallery__text">
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                        Dicta, doloribus vel. Eaque maxime cupiditate voluptatum vero,
-                                        iste tempore velit officia?
+                                        Me gusta mucho la musica de too tipo de generos, es lo que mas me hace desconectar.
                                     </p>
                                 </figure>
                                 <figure class="gallery__item" id="tabs-3">
                                     <div class="gallery__container-image">
                                         <a href="#" class="gallery__link">
-                                            <img src="img/galeria-3.jpg" alt="" class="gallery__image" />
+                                            <img src="https://web-assets.esetstatic.com/wls/2021/08/por-qu%C3%A9-compa%C3%B1%C3%ADas-videojuegos-son-blanco-atractivo-cibercriminales.jpg" alt="" class="gallery__image" />
                                         </a>
                                     </div>
-                                    <figcaption class="gallery__title">React</figcaption>
+                                    <figcaption class="gallery__title">Videojuegos</figcaption>
                                     <i class="gallery__icon fa-solid fa-code-commit"></i>
-                                    <span class="gallery__category">Curso</span>
+                                    <span class="gallery__category">Videojuegos</span>
                                     <p class="gallery__text">
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                        Dicta, doloribus vel. Eaque maxime cupiditate voluptatum vero,
-                                        iste tempore velit officia?
+                                        Me gusta jugar a videojuegos en mi tiempo libre.
                                     </p>
                                 </figure>
                                 <figure class="gallery__item" id="tabs-4">
                                     <div class="gallery__container-image">
                                         <a href="#" class="gallery__link">
-                                            <img src="img/galeria-4.jpg" alt="" class="gallery__image" />
+                                            <img src="https://www.cadenadial.com/wp-content/uploads/2023/09/Fiesta-del-Cine-2023-.jpg" alt="" class="gallery__image" />
                                         </a>
                                     </div>
-                                    <figcaption class="gallery__title">Red social</figcaption>
+                                    <figcaption class="gallery__title">Cine</figcaption>
                                     <i class="gallery__icon fa-solid fa-code"></i>
-                                    <span class="gallery__category">Web</span>
+                                    <span class="gallery__category">Cine</span>
                                     <p class="gallery__text">
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                        Dicta, doloribus vel. Eaque maxime cupiditate voluptatum vero,
-                                        iste tempore velit officia?
+                                        Me encante ir al cine y ver peliculas y series.
                                     </p>
                                 </figure>
                                 <figure class="gallery__item" id="tabs-5">
                                     <div class="gallery__container-image">
                                         <a href="#" class="gallery__link">
-                                            <img src="img/galeria-5.jpg" alt="" class="gallery__image" />
+                                            <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2023/07/duda-resuelta-existen-tantos-lenguajes-programacion-3079266.jpg?tf=3840x" alt="" class="gallery__image" />
                                         </a>
                                     </div>
                                     <figcaption class="gallery__title">Programación</figcaption>
                                     <i class="gallery__icon fa-solid fa-code"></i>
-                                    <span class="gallery__category">Curso</span>
+                                    <span class="gallery__category">Programacion</span>
                                     <p class="gallery__text">
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                        Dicta, doloribus vel. Eaque maxime cupiditate voluptatum vero,
-                                        iste tempore velit officia?
+                                        Me gusta mucho programar y por eso es lo que estoy estudiando.
                                     </p>
                                 </figure>
                                 <figure class="gallery__item" id="tabs-6">
                                     <div class="gallery__container-image">
                                         <a href="#" class="gallery__link">
-                                            <img src="img/galeria-6.jpg" alt="" class="gallery__image" />
+                                            <img src="https://as01.epimg.net/deporteyvida/imagenes/2018/01/24/portada/1516823560_114191_1516823751_noticia_normal.jpg" alt="" class="gallery__image" />
                                         </a>
                                     </div>
-                                    <figcaption class="gallery__title">Imágenes</figcaption>
+                                    <figcaption class="gallery__title">Salir con los amigos</figcaption>
                                     <i class="gallery__icon fa-solid fa-image-portrait"></i>
-                                    <span class="gallery__category">Proyecto</span>
+                                    <span class="gallery__category">Salir con los amigos</span>
                                     <p class="gallery__text">
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                        Dicta, doloribus vel. Eaque maxime cupiditate voluptatum vero,
-                                        iste tempore velit officia?
+                                        En mi tiempo libre me encanta salir con mis amigos.
                                     </p>
                                 </figure>
                             </section>
