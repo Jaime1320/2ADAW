@@ -20,6 +20,7 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
         integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
+    <script src="js/popup.js" defer></script>
 
     <title>Curriculum Vitae</title>
 </head>
@@ -27,6 +28,29 @@
 <body>
     <!-- layout principal. Usamos metodología BEM -->
     <div class="layout">
+        <!--Creamos el menu hamburguesa-->
+        <nav class="mobile-menu">
+            <a href="#" class="hamburger-wrapper">
+              <div class="hamburger-menu"></div>
+            </a>
+            <div class="mobile-menu-overlay">
+              <ul>
+                <img src="img/default-user.jpg" class="user-info__image_mobile" alt="" />
+                <li class="menu__option">
+                  <a class="oscuro">
+                    <i class="menu__icon fa-solid fa-moon fa-house"></i>
+                    <span class="menu__overlay">Modo oscuro</span>
+                  </a>
+                </li>
+                <li><a class="menu__link menu__link--active" href="index.html">Home</a></li>
+                <li><a class="menu__link" href="sobre-mi.html">Sobre mí</a></li>
+                <li><a class="menu__link" href="curriculum.html">Currículum</a></li>
+                <li><a class="menu__link" href="portafolio.html">Portafolio</a></li>
+                <li><a class="menu__link" href="blog.html">Blog</a></li>
+                <li><a class="menu__link" href="contacto.html">Contacto</a></li>
+              </ul>
+            </div>
+          </nav>
         <!-- barra lateral (info usuario). -->
         <aside class="layout__aside">
             <section class="aside__user-info">
@@ -109,6 +133,9 @@
 
                 <!-- botón del curriculum -->
                 <div class="user-info__buttons">
+                    <div id="dialog" title="CV">
+                        Este es el CV de Jaime Hermana Caffarena
+                    </div>
                     <a href="#" class="user-info__btn">Descargar CV</a>
                 </div>
 
@@ -134,30 +161,26 @@
                         <div class="resume__timelines">
                             <article class="timelines__timeline">
                                 <header class="timeline__header">
-                                    <h4 class="timeline_year">2022</h4>
-                                    <span class="timeline__company">Universidad Alfonso X</span>
+                                    <h4 class="timeline_year">2018</h4>
+                                    <span class="timeline__company">Colegio la Asuncion Málaga</span>
                                 </header>
                                 <div class="timeline__divider">
                                 </div>
                                 <div class="timeline__description">
-                                    <h3 class="timeline__title">MÁSTER UNIVERSITARIO EN FORMACIÓN DEL PROFESORADO DE
-                                        EDUCACIÓN SECUNDARIA OBLIGATORIA Y BACHILLERATO, FORMACIÓN PROFESIONAL Y
-                                        ENSEÑANZAS DE IDIOMAS</h3>
-                                    <p class="timeline__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Odit nihil fuga harum ut, recusandae saepe natus.</p>
+                                    <h3 class="timeline__title">BACHILLERARO RAMA DE CIENCIAS</h3>
+                                    <p class="timeline__text">Cursado del 2016-2018</p>
                                 </div>
                             </article>
                             <article class="timelines__timeline">
                                 <header class="timeline__header">
-                                    <h4 class="timeline_year">1995</h4>
-                                    <span class="timeline__company">Universidad de Málaga</span>
+                                    <h4 class="timeline_year">2015</h4>
+                                    <span class="timeline__company">EDUCACIÓN SECUNDARIA OBLIGATORIA</span>
                                 </header>
                                 <div class="timeline__divider">
                                 </div>
                                 <div class="timeline__description">
-                                    <h3 class="timeline__title">ETSI Ingeniería Técnica Informática de Sistemas</h3>
-                                    <p class="timeline__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Odit nihil fuga harum ut, recusandae saepe natus.</p>
+                                    <h3 class="timeline__title">Cursada la ESO (Educación Secundaria Obligatoria) en el colegio La Asunción Málaga.</p>
+                                    <p class="timeline__text">Cursado del 2011-2015</p>
                                 </div>
                             </article>
                         </div>
@@ -168,28 +191,26 @@
                         <div class="resume__timelines">
                             <article class="timelines__timeline">
                                 <header class="timeline__header">
-                                    <h4 class="timeline_year">2023-Actualidad</h4>
-                                    <span class="timeline__company">MEDAC</span>
+                                    <h4 class="timeline_year">2020-Actualidad</h4>
+                                    <span class="timeline__company">Groundforce Málaga</span>
                                 </header>
                                 <div class="timeline__divider">
                                 </div>
                                 <div class="timeline__description">
-                                    <h3 class="timeline__title">Docente</h3>
-                                    <p class="timeline__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Odit nihil fuga harum ut, recusandae saepe natus.</p>
+                                    <h3 class="timeline__title">Agente de pasaje</h3>
+                                    <p class="timeline__text">Trabajando como agente de pasaje en el aeropuerto de Málaga para una serie de compañias a traves del handling Groundforce.</p>
                                 </div>
                             </article>
                             <article class="timelines__timeline">
                                 <header class="timeline__header">
-                                    <h4 class="timeline_year">2001-2023</h4>
-                                    <span class="timeline__company">DEKRA</span>
+                                    <h4 class="timeline_year">2019-2020</h4>
+                                    <span class="timeline__company">Hilton Edinburgo</span>
                                 </header>
                                 <div class="timeline__divider">
                                 </div>
                                 <div class="timeline__description">
-                                    <h3 class="timeline__title">Jefe de Unidad</h3>
-                                    <p class="timeline__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Odit nihil fuga harum ut, recusandae saepe natus.</p>
+                                    <h3 class="timeline__title">Asistente de cocina</h3>
+                                    <p class="timeline__text">Asistente en cocina para la cadena de hoteles Hilton en Edinburgo, Escocia.</p>
                                 </div>
                             </article>
                         </div>
@@ -278,7 +299,6 @@
                                 <li class="knowledges_option">Desarrollo web</li>
                                 <li class="knowledges_option">Diseño web</li>
                                 <li class="knowledges_option">Bases de datos</li>
-                                <li class="knowledges_option">Formación</li>
                             </ul>
                         </div>
                     </section>
@@ -294,9 +314,9 @@
                                 <img src="img/certificado-1.png" class="certificate__img" alt="">
                             </div>
                             <div class="certificate__content">
-                                <h4 class="certificate__title">Título certificado 1</h4>
+                                <h4 class="certificate__title">Certificado TECO</h4>
                                 <span class="certificate__id">ID_Cert_1</span>
-                                <span class="certificate__date">10 de junio 2023</span>
+                                <span class="certificate__date">10 de junio 2021</span>
                             </div>
                         </article>
                         <article class="certificates__certificate">
@@ -304,7 +324,7 @@
                                 <img src="img/certificado-1.png" class="certificate__img" alt="">
                             </div>
                             <div class="certificate__content">
-                                <h4 class="certificate__title">Título certificado 2</h4>
+                                <h4 class="certificate__title">Certificado DAW</h4>
                                 <span class="certificate__id">ID_Cert_2</span>
                                 <span class="certificate__date">10 de junio 2022</span>
                             </div>

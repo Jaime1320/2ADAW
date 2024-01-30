@@ -1,5 +1,4 @@
-
-//Hacemos el carrousel
+//Hacemos el carrousel del portfolio
 $(document).ready(function () {
     $(".owl-carousel").owlCarousel({
       loop: true,

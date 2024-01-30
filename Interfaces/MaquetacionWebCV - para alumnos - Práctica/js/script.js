@@ -25,18 +25,13 @@ $(document).ready(() => {
     }
   });
 
+  //Ponemos el datepicker para el campo de la fecha
   $("#fecha").datepicker();
 
   //Mover la pagina de arriba abajo al cargar
   $(".layout").slideUp(250, () => {
     $(".layout").slideDown(250);
   });
-
-  //POP UP
-  $(".user-info__btn").click(() => {
-    $("#dialog").dialog();
-  });
-  $("#dialog").hide();
 
   //Animacion para el nombre al cargar
   //Hacemos que primero que se mueva el nombre
@@ -59,4 +54,10 @@ $(document).ready(() => {
     return false;
   });
   $("#tabs").tabs();
+
+  //Menu Hamburguesa
+  $('.hamburger-wrapper').on('click', () => {
+    $('.hamburger-menu').toggleClass('animate');
+    $('.mobile-menu-overlay').toggleClass('visible');
+  });
 });
