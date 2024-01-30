@@ -3,76 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Animes</title>
+    <title>Random anime</title>
 </head>
 <body>
-
-    <form action="" method="post">
-        Titulo: <input type="text" name="titulo"><br>
-        Limite: <select name="limit">
-            <option value="">Todos</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
-        <br>
-        Minimo: <select name="minimo">
-            <option value="">Minimo</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select>
-        <br>
-        Maximo: <select name="maximo">
-            <option value="">Maximo</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select>
-
-        <input type="submit" value="Buscar">
-
-    </form>
     <?php
-        if($_SERVER["REQUEST_METHOD"] == "POST"){
-            $titulo = urlencode($_POST["titulo"]);
-            $limit =  $_POST["limit"];
-            $minimo =  $_POST["minimo"];
-            $maximo =  $_POST["maximo"];
-            $apiUrl = "https://api.jikan.moe/v4/anime?q=$titulo&limit=$limit&min_score=$minimo&max_score=$maximo";
-    
-            $curl = curl_init();
-            curl_setopt($curl, CURLOPT_URL, $apiUrl);
-            curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
-            $respuesta = curl_exec($curl);
-            $array = json_decode($respuesta, true);
-            $animes = $array['data'];
+    // Define la URL de la API Jikan que proporciona información sobre un anime aleatorio
+    $apiUrl = "https://api.jikan.moe/v4/random/anime";
 
-            foreach($animes as $anime){ ?>
-                <h1><?php echo $anime['title']?></h1>
-                <img src="<?php echo $anime['images']['jpg']['image_url'] ?>" alt="">
-                <p><?php echo $anime['score']?></p>
-            <?php }
-        }
+    // Inicializa una sesión cURL para realizar la solicitud HTTP a la API
+    $curl = curl_init();
+
+    // Configura las opciones de cURL, estableciendo la URL y solicitando que la respuesta sea devuelta como una cadena de texto
+    curl_setopt($curl, CURLOPT_URL, $apiUrl);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+    // Ejecuta la solicitud y almacena la respuesta en la variable $respuesta
+    $respuesta = curl_exec($curl);
+
+    // Convierte la respuesta JSON en un array asociativo
+    $array = json_decode($respuesta, true);
+
+    // Descomenta la línea siguiente para imprimir el array completo y depurarlo si es necesario
+    //var_dump($array);
+
+    // Extrae la información del anime del array obtenido
+    $anime = $array['data'];
+
+    // Almacena el título del anime en la variable $titulo
+    $titulo = $anime['title'];
+
+    // Almacena la URL de la imagen del anime en la variable $imagen
+    $imagen = $anime['images']['jpg']['image_url'];
     ?>
-        <br>
 
-   
+    <!-- Imprime el título del anime en un elemento <h1> del HTML -->
+    <h1><?php echo $titulo ?></h1>
+    <!-- Imprime la foto del anime en un elemento <img> del HTML -->
+    <img src="<?php echo $imagen?>" alt="">
 </body>
 </html>
