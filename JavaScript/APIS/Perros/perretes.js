@@ -14,7 +14,6 @@ document.querySelector("input").addEventListener("click", function(){
             imagen.setAttribute("width","200px");
             imagen.setAttribute("height","200px")
             document.querySelector("div").appendChild(imagen);
-
         });
         xhr.send();
 })
