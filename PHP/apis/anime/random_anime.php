@@ -28,7 +28,7 @@
 
     // Extrae la información del anime del array obtenido
     $anime = $array['data'];
-
+ 
     // Almacena el título del anime en la variable $titulo
     $titulo = $anime['title'];
 
