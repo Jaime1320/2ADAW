@@ -17,7 +17,7 @@ export const PrimerComponente = (props) => {
     console.log(props);
 
     return (
-    <div className='mi-componente'>
+    <div classNameName='mi-componente'>
         {/* Comentario */}
         <hr/>
         <h2>Componente creado</h2>

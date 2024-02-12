@@ -1,0 +1,107 @@
+@media (max-width: 1230px){ 
+    .wrap{
+        width: 90%;
+        margin: 0px auto;
+    }
+
+    .card{
+        width: 17%;
+        margin: 1.4%;
+    }
+
+    .card p{
+        display: block;
+        width: 88%;
+        margin: 0px auto;
+        text-align: center;
+        font-size: 1.1vw;
+    }
+
+    #banner h1{
+        /*font-size: 35px;
+        margin: 33px auto; */
+        width: 100%;
+        text-align: center;
+        font-size: 4vw; 
+    }
+
+    #articles{
+        width: 65%;
+    }
+
+    #articles article{
+        width: 98%;
+    }
+    #footer .wrap > div{
+        width: 26%;
+    }
+
+    #footer #browsers img{
+        width: 14%;
+    }
+    #footer h5{
+        /*font-size: 30px; */
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 1079px){
+
+}
+@media (max-width: 969px){
+
+}
+@media (max-width: 920px){
+    #articles{
+        width: 65%;
+    }
+    #lateral{
+        width: 25%;
+    }
+    #lateral input[type="text"]{
+        width: 78%;
+    }
+    .aside-box{
+        width: 95%;
+        min-height: 240px;
+        height: auto;
+        padding-bottom: 10px;
+    }
+    #login input[type="email"],
+    #login input[type="password"]{
+        width: 65%;
+    }
+    #login #user, 
+    #login #password{
+        margin-left: 24px;
+    }
+    #login input[type="submit"],
+    #login input[type="button"],
+    #login input[type="reset"],
+    #login button{
+        margin: 20px;
+    }
+    #login input[type="reset"]{
+        display: none;
+    }
+
+    #login a{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 890px){
+
+}
+
+
+/* movemos ya el menú y cambiamos estructura */
+@media (max-width: 800px){
+
+}
+/* Visionado para Móviles */
+@media (max-width: 660px){
+
+}
