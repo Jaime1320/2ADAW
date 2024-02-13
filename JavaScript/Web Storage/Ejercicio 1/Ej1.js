@@ -1,7 +1,5 @@
 if (document.querySelectorAll("input")[2]) {
-  document
-    .querySelectorAll("input")[2]
-    .addEventListener("click", function (ev) {
+  document.querySelectorAll("input")[2].addEventListen("click", function (ev) {
       ev.preventDefault();
       let nombre = document.querySelectorAll("input")[0].value;
       let clave = document.querySelectorAll("input")[1].value;
