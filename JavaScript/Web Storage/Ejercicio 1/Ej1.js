@@ -1,5 +1,5 @@
 if (document.querySelectorAll("input")[2]) {
-  document.querySelectorAll("input")[2].addEventListen("click", function (ev) {
+  document.querySelectorAll("input")[2].addEventListener("click", function(ev) {
       ev.preventDefault();
       let nombre = document.querySelectorAll("input")[0].value;
       let clave = document.querySelectorAll("input")[1].value;
@@ -21,9 +21,7 @@ if (document.querySelectorAll("input")[2]) {
 }
 
 if (document.querySelectorAll("input[type='button']")[0]) {
-  document
-    .querySelectorAll("input[type='button']")[0]
-    .addEventListener("click", function () {
+  document.querySelectorAll("input[type='button']")[0].addEventListener("click", function () {
       console.log(JSON.parse(localStorage.getItem("usuarios")));
     });
 }
